@@ -24,10 +24,6 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
 
-                context.SaveChanges();
-
-                result=context.SaveChanges();
-
             }
             catch
             {
