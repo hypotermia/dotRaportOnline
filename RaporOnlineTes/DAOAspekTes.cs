@@ -7,11 +7,11 @@ namespace RaporOnlineTes
     [TestClass]
     public class DAOAspekTes
     {
+        AspekDAO aDAO = new AspekDAO();
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodDetail()
         {
             int id = 0;
-            AspekDAO aDAO = new AspekDAO();
             ASPEK expectResult = null;
             ASPEK result = aDAO.detail(id);
 
@@ -19,20 +19,30 @@ namespace RaporOnlineTes
         }
         
         [TestMethod]
-        public void TestMethod2()
+        public void TestMethodDetail2()
         {
             int id = 1;
-            AspekDAO aDAO = new AspekDAO();
-            //ASPEK expectResult = null;
             ASPEK result = aDAO.detail(id);
             
             Assert.IsNotNull(result);
         }
+<<<<<<< HEAD
 
         public void TestTambah()
         {
             int id = 1;
 
         }
+||||||| merged common ancestors
+=======
+        public void TestMethodTambahBerhasil()
+        {
+            ASPEK Asp = new ASPEK();
+            ASPEK expectResult = null;
+            var result = aDAO.add(Asp);
+
+            Assert.AreEqual(-1, result);
+        }
+>>>>>>> 9e1c3cf39c9166cfcd138000dc91de118e3dd145
     }
 }
