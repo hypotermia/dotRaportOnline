@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.LOGIN.Add(login);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {

@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.ALAMAT.Add(alamat);
-                context.SaveChanges();
+                result = context.SaveChanges();
             }
             catch
             {

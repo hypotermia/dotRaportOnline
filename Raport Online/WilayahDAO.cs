@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.WILAYAH.Add(wilayah);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {

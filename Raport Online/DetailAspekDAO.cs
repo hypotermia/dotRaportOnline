@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.DETAIL_ASPEK.Add(detailaspek);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {

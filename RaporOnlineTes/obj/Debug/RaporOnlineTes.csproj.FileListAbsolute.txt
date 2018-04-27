@@ -18,3 +18,23 @@ C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTe
 C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.dll
 C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.pdb
 C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\RaporOnlineTes.dll.config
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\RaporOnlineTes.dll.config
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\RaporOnlineTes.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\RaporOnlineTes.pdb
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Raport Online.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\EntityFramework.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Raport Online.pdb
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Raport Online.dll.config
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\bin\Debug\EntityFramework.xml
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csprojResolveAssemblyReference.cache
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CoreCompileInputs.cache
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CopyComplete
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.dll
+E:\btcamp lawencon\Dotnet\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.pdb

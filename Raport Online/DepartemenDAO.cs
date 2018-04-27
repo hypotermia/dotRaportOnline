@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.DEPARTEMEN.Add(departemen);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {
