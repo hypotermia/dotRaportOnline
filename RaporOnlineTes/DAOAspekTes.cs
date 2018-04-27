@@ -26,15 +26,14 @@ namespace RaporOnlineTes
             
             Assert.IsNotNull(result);
         }
-<<<<<<< HEAD
+
 
         public void TestTambah()
         {
             int id = 1;
 
         }
-||||||| merged common ancestors
-=======
+
         public void TestMethodTambahBerhasil()
         {
             ASPEK Asp = new ASPEK();
@@ -44,6 +43,6 @@ namespace RaporOnlineTes
             Assert.AreEqual(-1, result);
             //ini ko0men
         }
->>>>>>> 9e1c3cf39c9166cfcd138000dc91de118e3dd145
+
     }
 }
