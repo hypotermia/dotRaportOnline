@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raport Online", "Raport Online\Raport Online.csproj", "{8F78E1E7-2DE2-4DC9-975B-E365821E337D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaporOnlineTes", "RaporOnlineTes\RaporOnlineTes.csproj", "{3E8B2078-C708-40B8-B5E6-DAA7439E5719}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F78E1E7-2DE2-4DC9-975B-E365821E337D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F78E1E7-2DE2-4DC9-975B-E365821E337D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F78E1E7-2DE2-4DC9-975B-E365821E337D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F78E1E7-2DE2-4DC9-975B-E365821E337D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E0DB356-B51F-48B1-B0A7-B3353D2FB7FD}
+	EndGlobalSection
+EndGlobal

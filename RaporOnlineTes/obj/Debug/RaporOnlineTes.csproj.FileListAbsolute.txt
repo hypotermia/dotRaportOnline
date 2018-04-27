@@ -1,0 +1,20 @@
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\RaporOnlineTes.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\RaporOnlineTes.pdb
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Raport Online.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\EntityFramework.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Raport Online.pdb
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Raport Online.dll.config
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\EntityFramework.xml
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.csprojResolveAssemblyReference.cache
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CoreCompileInputs.cache
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CopyComplete
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.dll
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\obj\Debug\RaporOnlineTes.pdb
+C:\Users\Zakki\source\repos\Raport Online\RaporOnlineTes\bin\Debug\RaporOnlineTes.dll.config

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="fixraporModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ALAMAT">
+    <Key>
+      <PropertyRef Name="ID_ALAMAT" />
+    </Key>
+    <Property Name="ID_ALAMAT" Type="Int32" Nullable="false" />
+    <Property Name="ID_WILAYAH" Type="Int32" />
+    <Property Name="ID_KARYAWAN" Type="Int32" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="KARYAWAN" Relationship="Self.FK_ALAMAT_RELATIONS_KARYAWAN" FromRole="ALAMAT" ToRole="KARYAWAN" />
+    <NavigationProperty Name="WILAYAH" Relationship="Self.FK_ALAMAT_RELATIONS_WILAYAH" FromRole="ALAMAT" ToRole="WILAYAH" />
+  </EntityType>
+  <EntityType Name="ASPEK">
+    <Key>
+      <PropertyRef Name="ID_ASPEK" />
+    </Key>
+    <Property Name="ID_ASPEK" Type="Int64" Nullable="false" />
+    <Property Name="ID_SUB" Type="Int32" />
+    <Property Name="NAMA_ASPEK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SUB_ASPEK" Relationship="Self.FK_ASPEK_RELATIONS_SUB_ASPE" FromRole="ASPEK" ToRole="SUB_ASPEK" />
+  </EntityType>
+  <EntityType Name="DEPARTEMEN">
+    <Key>
+      <PropertyRef Name="ID_DEPARTEMEN" />
+    </Key>
+    <Property Name="ID_DEPARTEMEN" Type="Int32" Nullable="false" />
+    <Property Name="ID_KARYAWAN" Type="Int32" />
+    <Property Name="NAMA_DEPARTEMEN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="KARYAWAN" Relationship="Self.FK_DEPARTEM_RELATIONS_KARYAWAN" FromRole="DEPARTEMEN" ToRole="KARYAWAN" />
+    <NavigationProperty Name="KARYAWAN1" Relationship="Self.FK_KARYAWAN_RELATIONS_DEPARTEM" FromRole="DEPARTEMEN" ToRole="KARYAWAN" />
+  </EntityType>
+  <EntityType Name="DETAIL_ASPEK">
+    <Key>
+      <PropertyRef Name="ID_DETAIL" />
+    </Key>
+    <Property Name="ID_DETAIL" Type="Int32" Nullable="false" />
+    <Property Name="ID_RAPOR" Type="Int32" />
+    <Property Name="NILAI_K_A" Type="Int32" />
+    <Property Name="NILAI_K_B" Type="Int32" />
+    <NavigationProperty Name="RAPOR" Relationship="Self.FK_DETAIL_A_RELATIONS_RAPOR" FromRole="DETAIL_ASPEK" ToRole="RAPOR" />
+    <NavigationProperty Name="SUB_ASPEK" Relationship="Self.FK_SUB_ASPE_RELATIONS_DETAIL_A" FromRole="DETAIL_ASPEK" ToRole="SUB_ASPEK" />
+  </EntityType>
+  <EntityType Name="JABATAN">
+    <Key>
+      <PropertyRef Name="ID_JABATAN" />
+    </Key>
+    <Property Name="ID_JABATAN" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_JABATAN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="KARYAWAN" Relationship="Self.FK_KARYAWAN_RELATIONS_JABATAN" FromRole="JABATAN" ToRole="KARYAWAN" />
+  </EntityType>
+  <EntityType Name="KARYAWAN">
+    <Key>
+      <PropertyRef Name="ID_KARYAWAN" />
+    </Key>
+    <Property Name="ID_KARYAWAN" Type="Int32" Nullable="false" />
+    <Property Name="ID_DEPARTEMEN" Type="Int32" />
+    <Property Name="ID_JABATAN" Type="Int32" />
+    <Property Name="NO_KTP" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAMA_LENGKAP" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JENIS_KELAMIN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TEMPAT_LAHIR" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TANGGAL_LAHIR" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="AGAMA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS_PERKAWINAN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="KEWARGANEGARAAN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PENDIDIKAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ALAMAT" Relationship="Self.FK_ALAMAT_RELATIONS_KARYAWAN" FromRole="KARYAWAN" ToRole="ALAMAT" />
+    <NavigationProperty Name="DEPARTEMEN" Relationship="Self.FK_DEPARTEM_RELATIONS_KARYAWAN" FromRole="KARYAWAN" ToRole="DEPARTEMEN" />
+    <NavigationProperty Name="DEPARTEMEN1" Relationship="Self.FK_KARYAWAN_RELATIONS_DEPARTEM" FromRole="KARYAWAN" ToRole="DEPARTEMEN" />
+    <NavigationProperty Name="JABATAN" Relationship="Self.FK_KARYAWAN_RELATIONS_JABATAN" FromRole="KARYAWAN" ToRole="JABATAN" />
+    <NavigationProperty Name="LOGIN" Relationship="Self.FK_LOGIN_RELATIONS_KARYAWAN" FromRole="KARYAWAN" ToRole="LOGIN" />
+    <NavigationProperty Name="RAPOR" Relationship="Self.FK_RAPOR_MEMILIKI_KARYAWAN" FromRole="KARYAWAN" ToRole="RAPOR" />
+    <NavigationProperty Name="RAPOR1" Relationship="Self.FK_RAPOR_MENILAI_KARYAWAN" FromRole="KARYAWAN" ToRole="RAPOR" />
+  </EntityType>
+  <EntityType Name="LOGIN">
+    <Key>
+      <PropertyRef Name="ID_LOGIN" />
+    </Key>
+    <Property Name="ID_LOGIN" Type="Int32" Nullable="false" />
+    <Property Name="ID_KARYAWAN" Type="Int32" />
+    <Property Name="USERNAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KARYAWAN" Relationship="Self.FK_LOGIN_RELATIONS_KARYAWAN" FromRole="LOGIN" ToRole="KARYAWAN" />
+  </EntityType>
+  <EntityType Name="RAPOR">
+    <Key>
+      <PropertyRef Name="ID_RAPOR" />
+    </Key>
+    <Property Name="ID_RAPOR" Type="Int32" Nullable="false" />
+    <Property Name="ID_KARYAWAN" Type="Int32" Nullable="false" />
+    <Property Name="KAR_ID_KARYAWAN" Type="Int32" Nullable="false" />
+    <Property Name="JUMLAH" Type="Int32" Nullable="false" />
+    <Property Name="RATA2" Type="Int32" Nullable="false" />
+    <Property Name="BERLAKU" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ID_PENILAI" Type="Int32" Nullable="false" />
+    <Property Name="PERIODE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DETAIL_ASPEK" Relationship="Self.FK_DETAIL_A_RELATIONS_RAPOR" FromRole="RAPOR" ToRole="DETAIL_ASPEK" />
+    <NavigationProperty Name="KARYAWAN" Relationship="Self.FK_RAPOR_MEMILIKI_KARYAWAN" FromRole="RAPOR" ToRole="KARYAWAN" />
+    <NavigationProperty Name="KARYAWAN1" Relationship="Self.FK_RAPOR_MENILAI_KARYAWAN" FromRole="RAPOR" ToRole="KARYAWAN" />
+  </EntityType>
+  <EntityType Name="SUB_ASPEK">
+    <Key>
+      <PropertyRef Name="ID_SUB" />
+    </Key>
+    <Property Name="ID_SUB" Type="Int32" Nullable="false" />
+    <Property Name="ID_DETAIL" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_SUBASPEK" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ASPEK" Relationship="Self.FK_ASPEK_RELATIONS_SUB_ASPE" FromRole="SUB_ASPEK" ToRole="ASPEK" />
+    <NavigationProperty Name="DETAIL_ASPEK" Relationship="Self.FK_SUB_ASPE_RELATIONS_DETAIL_A" FromRole="SUB_ASPEK" ToRole="DETAIL_ASPEK" />
+  </EntityType>
+  <EntityType Name="WILAYAH">
+    <Key>
+      <PropertyRef Name="ID_WILAYAH" />
+    </Key>
+    <Property Name="ID_WILAYAH" Type="Int32" Nullable="false" />
+    <Property Name="WIL_ID_WILAYAH" Type="Int32" Nullable="false" />
+    <Property Name="NAMA_WIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LEVEL" Type="Int32" Nullable="false" />
+    <Property Name="DIUBAH_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+    <Property Name="DIBUAT_OLEH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ALAMAT" Relationship="Self.FK_ALAMAT_RELATIONS_WILAYAH" FromRole="WILAYAH" ToRole="ALAMAT" />
+    <NavigationProperty Name="WILAYAH1" Relationship="Self.FK_WILAYAH_RELATIONS_WILAYAH" FromRole="WILAYAH" ToRole="WILAYAH1" />
+    <NavigationProperty Name="WILAYAH2" Relationship="Self.FK_WILAYAH_RELATIONS_WILAYAH" FromRole="WILAYAH1" ToRole="WILAYAH" />
+  </EntityType>
+  <Association Name="FK_ALAMAT_RELATIONS_KARYAWAN">
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="0..1" />
+    <End Role="ALAMAT" Type="Self.ALAMAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KARYAWAN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Principal>
+      <Dependent Role="ALAMAT">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ALAMAT_RELATIONS_WILAYAH">
+    <End Role="WILAYAH" Type="Self.WILAYAH" Multiplicity="0..1" />
+    <End Role="ALAMAT" Type="Self.ALAMAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WILAYAH">
+        <PropertyRef Name="ID_WILAYAH" />
+      </Principal>
+      <Dependent Role="ALAMAT">
+        <PropertyRef Name="ID_WILAYAH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASPEK_RELATIONS_SUB_ASPE">
+    <End Role="SUB_ASPEK" Type="Self.SUB_ASPEK" Multiplicity="0..1" />
+    <End Role="ASPEK" Type="Self.ASPEK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUB_ASPEK">
+        <PropertyRef Name="ID_SUB" />
+      </Principal>
+      <Dependent Role="ASPEK">
+        <PropertyRef Name="ID_SUB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEPARTEM_RELATIONS_KARYAWAN">
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="0..1" />
+    <End Role="DEPARTEMEN" Type="Self.DEPARTEMEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KARYAWAN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Principal>
+      <Dependent Role="DEPARTEMEN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KARYAWAN_RELATIONS_DEPARTEM">
+    <End Role="DEPARTEMEN" Type="Self.DEPARTEMEN" Multiplicity="0..1" />
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTEMEN">
+        <PropertyRef Name="ID_DEPARTEMEN" />
+      </Principal>
+      <Dependent Role="KARYAWAN">
+        <PropertyRef Name="ID_DEPARTEMEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETAIL_A_RELATIONS_RAPOR">
+    <End Role="RAPOR" Type="Self.RAPOR" Multiplicity="0..1" />
+    <End Role="DETAIL_ASPEK" Type="Self.DETAIL_ASPEK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAPOR">
+        <PropertyRef Name="ID_RAPOR" />
+      </Principal>
+      <Dependent Role="DETAIL_ASPEK">
+        <PropertyRef Name="ID_RAPOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUB_ASPE_RELATIONS_DETAIL_A">
+    <End Role="DETAIL_ASPEK" Type="Self.DETAIL_ASPEK" Multiplicity="1" />
+    <End Role="SUB_ASPEK" Type="Self.SUB_ASPEK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETAIL_ASPEK">
+        <PropertyRef Name="ID_DETAIL" />
+      </Principal>
+      <Dependent Role="SUB_ASPEK">
+        <PropertyRef Name="ID_DETAIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KARYAWAN_RELATIONS_JABATAN">
+    <End Role="JABATAN" Type="Self.JABATAN" Multiplicity="0..1" />
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JABATAN">
+        <PropertyRef Name="ID_JABATAN" />
+      </Principal>
+      <Dependent Role="KARYAWAN">
+        <PropertyRef Name="ID_JABATAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOGIN_RELATIONS_KARYAWAN">
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="0..1" />
+    <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KARYAWAN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Principal>
+      <Dependent Role="LOGIN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RAPOR_MEMILIKI_KARYAWAN">
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="1" />
+    <End Role="RAPOR" Type="Self.RAPOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KARYAWAN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Principal>
+      <Dependent Role="RAPOR">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RAPOR_MENILAI_KARYAWAN">
+    <End Role="KARYAWAN" Type="Self.KARYAWAN" Multiplicity="1" />
+    <End Role="RAPOR" Type="Self.RAPOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KARYAWAN">
+        <PropertyRef Name="ID_KARYAWAN" />
+      </Principal>
+      <Dependent Role="RAPOR">
+        <PropertyRef Name="KAR_ID_KARYAWAN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WILAYAH_RELATIONS_WILAYAH">
+    <End Role="WILAYAH" Type="Self.WILAYAH" Multiplicity="1" />
+    <End Role="WILAYAH1" Type="Self.WILAYAH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WILAYAH">
+        <PropertyRef Name="ID_WILAYAH" />
+      </Principal>
+      <Dependent Role="WILAYAH1">
+        <PropertyRef Name="WIL_ID_WILAYAH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="fixraporEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ALAMAT" EntityType="Self.ALAMAT" />
+    <EntitySet Name="ASPEK" EntityType="Self.ASPEK" />
+    <EntitySet Name="DEPARTEMEN" EntityType="Self.DEPARTEMEN" />
+    <EntitySet Name="DETAIL_ASPEK" EntityType="Self.DETAIL_ASPEK" />
+    <EntitySet Name="JABATAN" EntityType="Self.JABATAN" />
+    <EntitySet Name="KARYAWAN" EntityType="Self.KARYAWAN" />
+    <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
+    <EntitySet Name="RAPOR" EntityType="Self.RAPOR" />
+    <EntitySet Name="SUB_ASPEK" EntityType="Self.SUB_ASPEK" />
+    <EntitySet Name="WILAYAH" EntityType="Self.WILAYAH" />
+    <AssociationSet Name="FK_ALAMAT_RELATIONS_KARYAWAN" Association="Self.FK_ALAMAT_RELATIONS_KARYAWAN">
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+      <End Role="ALAMAT" EntitySet="ALAMAT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ALAMAT_RELATIONS_WILAYAH" Association="Self.FK_ALAMAT_RELATIONS_WILAYAH">
+      <End Role="WILAYAH" EntitySet="WILAYAH" />
+      <End Role="ALAMAT" EntitySet="ALAMAT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASPEK_RELATIONS_SUB_ASPE" Association="Self.FK_ASPEK_RELATIONS_SUB_ASPE">
+      <End Role="SUB_ASPEK" EntitySet="SUB_ASPEK" />
+      <End Role="ASPEK" EntitySet="ASPEK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEPARTEM_RELATIONS_KARYAWAN" Association="Self.FK_DEPARTEM_RELATIONS_KARYAWAN">
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+      <End Role="DEPARTEMEN" EntitySet="DEPARTEMEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KARYAWAN_RELATIONS_DEPARTEM" Association="Self.FK_KARYAWAN_RELATIONS_DEPARTEM">
+      <End Role="DEPARTEMEN" EntitySet="DEPARTEMEN" />
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETAIL_A_RELATIONS_RAPOR" Association="Self.FK_DETAIL_A_RELATIONS_RAPOR">
+      <End Role="RAPOR" EntitySet="RAPOR" />
+      <End Role="DETAIL_ASPEK" EntitySet="DETAIL_ASPEK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUB_ASPE_RELATIONS_DETAIL_A" Association="Self.FK_SUB_ASPE_RELATIONS_DETAIL_A">
+      <End Role="DETAIL_ASPEK" EntitySet="DETAIL_ASPEK" />
+      <End Role="SUB_ASPEK" EntitySet="SUB_ASPEK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KARYAWAN_RELATIONS_JABATAN" Association="Self.FK_KARYAWAN_RELATIONS_JABATAN">
+      <End Role="JABATAN" EntitySet="JABATAN" />
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOGIN_RELATIONS_KARYAWAN" Association="Self.FK_LOGIN_RELATIONS_KARYAWAN">
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+      <End Role="LOGIN" EntitySet="LOGIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RAPOR_MEMILIKI_KARYAWAN" Association="Self.FK_RAPOR_MEMILIKI_KARYAWAN">
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+      <End Role="RAPOR" EntitySet="RAPOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RAPOR_MENILAI_KARYAWAN" Association="Self.FK_RAPOR_MENILAI_KARYAWAN">
+      <End Role="KARYAWAN" EntitySet="KARYAWAN" />
+      <End Role="RAPOR" EntitySet="RAPOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WILAYAH_RELATIONS_WILAYAH" Association="Self.FK_WILAYAH_RELATIONS_WILAYAH">
+      <End Role="WILAYAH" EntitySet="WILAYAH" />
+      <End Role="WILAYAH1" EntitySet="WILAYAH" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

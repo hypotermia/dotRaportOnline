@@ -1,0 +1,10 @@
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\bin\Debug\Raport Online.dll.config
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\bin\Debug\Raport Online.dll
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\bin\Debug\Raport Online.pdb
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\bin\Debug\EntityFramework.dll
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\bin\Debug\EntityFramework.xml
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\obj\Debug\Raport Online.csprojResolveAssemblyReference.cache
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\obj\Debug\Raport Online.csproj.CoreCompileInputs.cache
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\obj\Debug\Raport Online.csproj.CopyComplete
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\obj\Debug\Raport Online.dll
+C:\Users\Zakki\source\repos\Raport Online\Raport Online\obj\Debug\Raport Online.pdb
