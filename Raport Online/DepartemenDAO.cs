@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raport_Online
 {
-    class DepartemenDAO
+     public class DepartemenDAO
     {
         private fixraporEntities context = new fixraporEntities();
 
