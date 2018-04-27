@@ -14,14 +14,14 @@ namespace Raport_Online
         {
 
         }
-
+        //acess modifier , type data keluaran(typeoutput), nama method ,(parameter(typedata , objek)) 
         public int add(ASPEK aspek)
         {
             var result = 0;
             try
             {
                 context.ASPEK.Add(aspek);
-                context.SaveChanges();
+                result = context.SaveChanges();
             }
             catch
             {

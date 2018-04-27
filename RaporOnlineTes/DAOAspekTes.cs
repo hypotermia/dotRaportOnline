@@ -17,7 +17,7 @@ namespace RaporOnlineTes
 
             Assert.AreEqual(expectResult, result);
         }
-        //zasdasdasdas
+        
         [TestMethod]
         public void TestMethod2()
         {
@@ -27,6 +27,12 @@ namespace RaporOnlineTes
             ASPEK result = aDAO.detail(id);
             
             Assert.IsNotNull(result);
+        }
+
+        public void TestTambah()
+        {
+            int id = 1;
+
         }
     }
 }
