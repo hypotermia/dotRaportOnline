@@ -42,6 +42,7 @@ namespace RaporOnlineTes
             var result = aDAO.add(Asp);
 
             Assert.AreEqual(-1, result);
+            //ini ko0men
         }
 >>>>>>> 9e1c3cf39c9166cfcd138000dc91de118e3dd145
     }
