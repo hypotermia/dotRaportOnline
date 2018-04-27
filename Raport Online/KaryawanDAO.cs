@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.KARYAWAN.Add(karyawan);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {

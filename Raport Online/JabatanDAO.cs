@@ -21,7 +21,7 @@ namespace Raport_Online
             try
             {
                 context.JABATAN.Add(jabatan);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {

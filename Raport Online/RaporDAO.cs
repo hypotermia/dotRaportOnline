@@ -23,7 +23,7 @@ namespace Raport_Online
             try
             {
                 context.RAPOR.Add(rapor);
-                context.SaveChanges();
+                result=context.SaveChanges();
             }
             catch
             {
