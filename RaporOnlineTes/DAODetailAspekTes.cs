@@ -5,46 +5,43 @@ using Raport_Online;
 namespace RaporOnlineTes
 {
     [TestClass]
-    public class DAOAspekTes
+    public class DAODetailAspekTes
     {
-        AspekDAO aDAO = new AspekDAO();
+        
+        DetailAspekDAO detail = new DetailAspekDAO();
         [TestMethod]
         public void TestMethodDetail()
         {
             int id = 0;
-            ASPEK expectResult = null;
-            ASPEK result = aDAO.detail(id);
+            DETAIL_ASPEK expectResult = null;
+            DETAIL_ASPEK result = detail.detail(id);
 
             Assert.AreEqual(expectResult, result);
         }
-        
+
         [TestMethod]
-        public void TestMethodBenarDetail2()
+        public void TestMethodDetail2()
         {
             int id = 1;
-            ASPEK result = aDAO.detail(id);
-
+            DETAIL_ASPEK result = detail.detail(id);
             Assert.IsNotNull(result);
         }
         [TestMethod]
         public void TestMethodDetail3()
         {
             int id = 01;
-            ASPEK result = aDAO.detail(id);
-
+            DETAIL_ASPEK result = detail.detail(id);
             Assert.IsNotNull(result);
         }
         [TestMethod]
-        public void TestMethodTambahAspek()
+        public void TestMethodTambah()
         {
-            ASPEK Asp = new ASPEK();
-            Asp.ID_ASPEK = 1;
-            int a = aDAO.add(Asp);
-           
+
+            DETAIL_ASPEK DetAs = new DETAIL_ASPEK();
+            DetAs.ID_DETAIL= 1;
+            int a = detail.add(DetAs);
+
             Assert.IsNotNull(a);
-            
         }
-
-
     }
 }

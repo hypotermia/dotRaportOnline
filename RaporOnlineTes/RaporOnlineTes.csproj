@@ -48,7 +48,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOAlamatTes.cs" />
     <Compile Include="DAOAspekTes.cs" />
+    <Compile Include="DAODepartemenTes.cs" />
+    <Compile Include="DAODetailAspekTes.cs" />
+    <Compile Include="DAODetailAspekTescs.cs" />
+    <Compile Include="DetailAspekDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

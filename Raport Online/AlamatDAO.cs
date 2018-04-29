@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raport_Online
 {
-    class AlamatDAO
+    public class AlamatDAO
     {
         private fixraporEntities context = new fixraporEntities();
 
@@ -14,7 +14,6 @@ namespace Raport_Online
         {
 
         }
-
         public int add(ALAMAT alamat)
         {
             var result = 0;

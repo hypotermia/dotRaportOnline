@@ -18,3 +18,13 @@ E:\btcamp lawencon\Dotnet\dotRaportOnline\Raport Online\obj\Debug\Raport Online.
 E:\btcamp lawencon\Dotnet\dotRaportOnline\Raport Online\obj\Debug\Raport Online.csproj.CopyComplete
 E:\btcamp lawencon\Dotnet\dotRaportOnline\Raport Online\obj\Debug\Raport Online.dll
 E:\btcamp lawencon\Dotnet\dotRaportOnline\Raport Online\obj\Debug\Raport Online.pdb
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\Raport Online.dll.config
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\Raport Online.dll
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\Raport Online.pdb
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\EntityFramework.dll
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\EntityFramework.xml
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.csprojResolveAssemblyReference.cache
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.csproj.CoreCompileInputs.cache
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.csproj.CopyComplete
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.dll
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.pdb
