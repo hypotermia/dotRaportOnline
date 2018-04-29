@@ -38,11 +38,11 @@ namespace RaporOnlineTes
         public void TestMethodTambahAspek()
         {
             ASPEK Asp = new ASPEK();
-            Asp.ID_ASPEK = 1;
+            Asp.ID_ASPEK = 2;
             Asp.DIBUAT_OLEH = "Zakki";
             Asp.DIBUAT_PADA = DateTime.Now;
             Asp.STATUS_AKTIF = true;
-            //aDAO.Add(Asp);
+            aDAO.Add(Asp);
 
             Assert.IsNotNull(aDAO.Add(Asp));
 
@@ -67,41 +67,47 @@ namespace RaporOnlineTes
         //            Assert.IsNull(a);
         //        }
 
-        //        [TestMethod]
-        //        public void EditAspect(int id, ASPEK aspek)
-        //        {
-        //            if (aspek == null)
-        //            {
-        //                throw new ArgumentNullException(nameof(aspek));
-        //            }
-        //            aspek.NAMA_ASPEK = null;
-        //            int a = aDAO.Edit(1, aspek);
+        //[TestMethod]
+        //public void EditAspect()
+        //{
+        //    ASPEK aspek = aDAO.Detail(2);
+        //    Assert.IsNotNull(aspek);
 
-        //            Assert.IsNotNull(a);
-        //        }
+        //if (aspek.ID_ASPEK == null)
+        //{
+        //    throw new ArgumentNullException("Error Message");
+        //}
+        //aspek.NAMA_ASPEK = "Try it ";
+        //aspek.DIUBAH_OLEH = "Zakki";
+        //aspek.DIUBAH_PADA = DateTime.Now;
+        //aDAO.Edit(1, aspek);
+
+        //    aDAO.Edit(2, aspek);
+        //}
 
 
         //[TestMethod]
-//public void EditAspect1(int id, ASPEK aspek)
-//{
-//    if (aspek == null)
-//    {
-//        throw new ArgumentNullException(nameof(aspek));
-//    }
-//    aspek.NAMA_ASPEK = "Anjaaaaaaay";
-//    int a = aDAO.Edit(1, aspek);
+        //public void EditAspect1(int id, ASPEK aspek)
+        //{
+        //    if (aspek == null)
+        //    {
+        //        throw new ArgumentNullException(nameof(aspek));
+        //    }
+        //    aspek.NAMA_ASPEK = "Anjaaaaaaay";
+        //    int a = aDAO.Edit(1, aspek);
 
-//    Assert.IsNotNull(a);
-//}
+        //    Assert.IsNotNull(a);
+        //}
 
-        //        [TestMethod]
-        //        public void Delete()
-        //        {
-        //            int id = 1;
-        //            bool isPermanent = false;
-        //            ASPEK aspek = new ASPEK();
-        //            var anu = aDAO.Delete(1, false);
+        //[TestMethod]
+        //public void Delete()
+        //{
+        //    ASPEK aspek = aDAO.Detail(2);
+        //    Assert.IsNotNull(aspek);
+        //    bool isPermanent = false;
 
-        //        }
+        //    var anu = aDAO.Delete(1, false);
+
+        //}
     }
 }

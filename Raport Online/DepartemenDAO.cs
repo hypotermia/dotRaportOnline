@@ -15,7 +15,7 @@ namespace Raport_Online
 
         }
 
-        public int add(DEPARTEMEN departemen)
+        public int Add(DEPARTEMEN departemen)
         {
             var result = 0;
             try
@@ -30,7 +30,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, DEPARTEMEN departemen)
+        public int Edit(int id, DEPARTEMEN departemen)
         {
             var result = 0;
             try
@@ -50,12 +50,12 @@ namespace Raport_Online
         }
 
 
-        public DEPARTEMEN detail(int id)
+        public DEPARTEMEN Detail(int id)
         {
             return context.DEPARTEMEN.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 
@@ -82,7 +82,7 @@ namespace Raport_Online
             return result;
         }
 
-        public List<DEPARTEMEN> getAll()
+        public List<DEPARTEMEN> GetAll()
         {
             return context.DEPARTEMEN.ToList();
         }

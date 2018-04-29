@@ -1,0 +1,13 @@
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\Raport Online.dll
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\EntityFramework.dll
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\Raport Online.pdb
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\Raport Online.dll.config
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\EntityFramework.xml
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

@@ -17,7 +17,7 @@ namespace Raport_Online
 
         }
 
-        public int add(RAPOR rapor)
+        public int Add(RAPOR rapor)
         {
             var result = 0;
             try
@@ -32,7 +32,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, RAPOR rapor)
+        public int Edit(int id, RAPOR rapor)
         {
             var result = 0;
             try
@@ -52,12 +52,12 @@ namespace Raport_Online
         }
 
 
-        public RAPOR detail(int id)
+        public RAPOR Detail(int id)
         {
             return context.RAPOR.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 
@@ -84,7 +84,7 @@ namespace Raport_Online
             return result;
         }
 
-        public List<RAPOR> getAll()
+        public List<RAPOR> GetAll()
         {
 
             return context.RAPOR.ToList();

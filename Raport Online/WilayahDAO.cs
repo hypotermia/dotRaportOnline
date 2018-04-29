@@ -15,7 +15,7 @@ namespace Raport_Online
 
         }
 
-        public int add(WILAYAH wilayah)
+        public int Add(WILAYAH wilayah)
         {
             var result = 0;
             try
@@ -30,7 +30,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, WILAYAH wilayah)
+        public int Edit(int id, WILAYAH wilayah)
         {
             var result = 0;
             try
@@ -50,7 +50,7 @@ namespace Raport_Online
         }
 
 
-        public WILAYAH detail(int id)
+        public WILAYAH Detail(int id)
         {
             return context.WILAYAH.Find(id);
         }
@@ -82,7 +82,7 @@ namespace Raport_Online
             return result;
         }
 
-        public List<WILAYAH> getAll()
+        public List<WILAYAH> GetAll()
         {
             return context.WILAYAH.ToList();
         }
