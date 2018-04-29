@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9437f7fc8c3a4a3fbab70820dcee5d43" Name="Diagram1" ZoomLevel="97">
+      <Diagram DiagramId="9437f7fc8c3a4a3fbab70820dcee5d43" Name="Diagram1" ZoomLevel="96">
         <EntityTypeShape EntityType="fixraporModel.ALAMAT" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="fixraporModel.ASPEK" Width="1.5" PointX="12" PointY="14.125" IsExpanded="true" />
         <EntityTypeShape EntityType="fixraporModel.DEPARTEMEN" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />

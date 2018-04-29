@@ -15,7 +15,7 @@ namespace Raport_Online
 
         }
         //acess modifier , type data keluaran(typeoutput), nama method ,(parameter(typedata , objek)) 
-        public int add(ASPEK aspek)
+        public int Add(ASPEK aspek)
         {
             var result = 0;
             try
@@ -32,19 +32,22 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, ASPEK aspek)
+        public int Edit(int id, ASPEK aspek)
         {
             var result = 0;
             try
             {
+                
                 var exsitingaspek = context.ASPEK.Find(id);
                 exsitingaspek.SUB_ASPEK = aspek.SUB_ASPEK;
                 exsitingaspek.NAMA_ASPEK = aspek.NAMA_ASPEK;
-
+                exsitingaspek.DIBUAT_OLEH = aspek.DIBUAT_OLEH;
+                exsitingaspek.DIBUAT_PADA = aspek.DIBUAT_PADA;
                 result = context.SaveChanges();
             }
             catch
             {
+                
                 result = -1;
             }
 
@@ -52,12 +55,12 @@ namespace Raport_Online
         }
 
 
-        public ASPEK detail(int id)
+        public ASPEK Detail(int id)
         {
             return context.ASPEK.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 

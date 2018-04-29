@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Raport_Online
 {
-    class RaporDAO
+    public class RaporDAO
     {
         private fixraporEntities context = new fixraporEntities();
 

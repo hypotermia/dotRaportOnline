@@ -48,12 +48,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOAlamatTes.cs" />
     <Compile Include="DAOAspekTes.cs" />
+    <Compile Include="DAODepartemenTes.cs" />
+    <Compile Include="DAODetailAspekTes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Raport Online\Raport Online.csproj">
