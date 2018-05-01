@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56a72f2f9c5f436691e42d2180b1d8dd" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineRaporModel.ALAMAT" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.ASPEK" Width="1.5" PointX="3" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.DEPARTEMEN" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.DETAIL_ASPEK" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.JABATAN" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.KARYAWAN" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.LOGIN" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.RAPOR" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.SUB_ASPEK" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineRaporModel.WILAYAH" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="OnlineRaporModel.FK_ALAMAT_RELATIONS_KARYAWAN" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_ALAMAT_RELATIONS_WILAYAH" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_SUB_ASPE_RELATIONS_ASPEK" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_DEPARTEM_RELATIONS_KARYAWAN" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_KARYAWAN_RELATIONS_DEPARTEM" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_DETAIL_A_RELATIONS_RAPOR" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_DETAIL_A_RELATIONS_SUB_ASPE" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_KARYAWAN_RELATIONS_JABATAN" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_LOGIN_RELATIONS_KARYAWAN" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_RAPOR_MEMILIKI_KARYAWAN" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_RAPOR_MENILAI_KARYAWAN" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineRaporModel.FK_WILAYAH_RELATIONS_WILAYAH" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

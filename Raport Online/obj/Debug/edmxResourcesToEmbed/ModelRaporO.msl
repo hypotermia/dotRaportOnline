@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnlineRaporModelStoreContainer" CdmEntityContainer="OnlineRaporEntities">
+    <EntitySetMapping Name="ALAMAT">
+      <EntityTypeMapping TypeName="OnlineRaporModel.ALAMAT">
+        <MappingFragment StoreEntitySet="ALAMAT">
+          <ScalarProperty Name="ID_ALAMAT" ColumnName="ID_ALAMAT" />
+          <ScalarProperty Name="ID_WILAYAH" ColumnName="ID_WILAYAH" />
+          <ScalarProperty Name="ID_KARYAWAN" ColumnName="ID_KARYAWAN" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASPEK">
+      <EntityTypeMapping TypeName="OnlineRaporModel.ASPEK">
+        <MappingFragment StoreEntitySet="ASPEK">
+          <ScalarProperty Name="ID_ASPEK" ColumnName="ID_ASPEK" />
+          <ScalarProperty Name="NAMA_ASPEK" ColumnName="NAMA_ASPEK" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTEMEN">
+      <EntityTypeMapping TypeName="OnlineRaporModel.DEPARTEMEN">
+        <MappingFragment StoreEntitySet="DEPARTEMEN">
+          <ScalarProperty Name="ID_DEPARTEMEN" ColumnName="ID_DEPARTEMEN" />
+          <ScalarProperty Name="ID_KARYAWAN" ColumnName="ID_KARYAWAN" />
+          <ScalarProperty Name="NAMA_DEPARTEMEN" ColumnName="NAMA_DEPARTEMEN" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETAIL_ASPEK">
+      <EntityTypeMapping TypeName="OnlineRaporModel.DETAIL_ASPEK">
+        <MappingFragment StoreEntitySet="DETAIL_ASPEK">
+          <ScalarProperty Name="ID_DETAIL" ColumnName="ID_DETAIL" />
+          <ScalarProperty Name="ID_SUB" ColumnName="ID_SUB" />
+          <ScalarProperty Name="ID_RAPOR" ColumnName="ID_RAPOR" />
+          <ScalarProperty Name="NILAI_K_A" ColumnName="NILAI_K_A" />
+          <ScalarProperty Name="NILAI_K_B" ColumnName="NILAI_K_B" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JABATAN">
+      <EntityTypeMapping TypeName="OnlineRaporModel.JABATAN">
+        <MappingFragment StoreEntitySet="JABATAN">
+          <ScalarProperty Name="ID_JABATAN" ColumnName="ID_JABATAN" />
+          <ScalarProperty Name="NAMA_JABATAN" ColumnName="NAMA_JABATAN" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KARYAWAN">
+      <EntityTypeMapping TypeName="OnlineRaporModel.KARYAWAN">
+        <MappingFragment StoreEntitySet="KARYAWAN">
+          <ScalarProperty Name="ID_KARYAWAN" ColumnName="ID_KARYAWAN" />
+          <ScalarProperty Name="ID_DEPARTEMEN" ColumnName="ID_DEPARTEMEN" />
+          <ScalarProperty Name="ID_JABATAN" ColumnName="ID_JABATAN" />
+          <ScalarProperty Name="NO_KTP" ColumnName="NO_KTP" />
+          <ScalarProperty Name="NAMA_LENGKAP" ColumnName="NAMA_LENGKAP" />
+          <ScalarProperty Name="JENIS_KELAMIN" ColumnName="JENIS_KELAMIN" />
+          <ScalarProperty Name="TEMPAT_LAHIR" ColumnName="TEMPAT_LAHIR" />
+          <ScalarProperty Name="TANGGAL_LAHIR" ColumnName="TANGGAL_LAHIR" />
+          <ScalarProperty Name="AGAMA" ColumnName="AGAMA" />
+          <ScalarProperty Name="STATUS_PERKAWINAN" ColumnName="STATUS_PERKAWINAN" />
+          <ScalarProperty Name="KEWARGANEGARAAN" ColumnName="KEWARGANEGARAAN" />
+          <ScalarProperty Name="PENDIDIKAN" ColumnName="PENDIDIKAN" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGIN">
+      <EntityTypeMapping TypeName="OnlineRaporModel.LOGIN">
+        <MappingFragment StoreEntitySet="LOGIN">
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="ID_KARYAWAN" ColumnName="ID_KARYAWAN" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAPOR">
+      <EntityTypeMapping TypeName="OnlineRaporModel.RAPOR">
+        <MappingFragment StoreEntitySet="RAPOR">
+          <ScalarProperty Name="ID_RAPOR" ColumnName="ID_RAPOR" />
+          <ScalarProperty Name="ID_KARYAWAN" ColumnName="ID_KARYAWAN" />
+          <ScalarProperty Name="KAR_ID_KARYAWAN" ColumnName="KAR_ID_KARYAWAN" />
+          <ScalarProperty Name="JUMLAH" ColumnName="JUMLAH" />
+          <ScalarProperty Name="RATA2" ColumnName="RATA2" />
+          <ScalarProperty Name="BERLAKU" ColumnName="BERLAKU" />
+          <ScalarProperty Name="ID_PENILAI" ColumnName="ID_PENILAI" />
+          <ScalarProperty Name="PERIODE" ColumnName="PERIODE" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUB_ASPEK">
+      <EntityTypeMapping TypeName="OnlineRaporModel.SUB_ASPEK">
+        <MappingFragment StoreEntitySet="SUB_ASPEK">
+          <ScalarProperty Name="ID_SUB" ColumnName="ID_SUB" />
+          <ScalarProperty Name="ID_ASPEK" ColumnName="ID_ASPEK" />
+          <ScalarProperty Name="NAMA_SUBASPEK" ColumnName="NAMA_SUBASPEK" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WILAYAH">
+      <EntityTypeMapping TypeName="OnlineRaporModel.WILAYAH">
+        <MappingFragment StoreEntitySet="WILAYAH">
+          <ScalarProperty Name="ID_WILAYAH" ColumnName="ID_WILAYAH" />
+          <ScalarProperty Name="WIL_ID_WILAYAH" ColumnName="WIL_ID_WILAYAH" />
+          <ScalarProperty Name="NAMA_WIL" ColumnName="NAMA_WIL" />
+          <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+          <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+          <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+          <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+          <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+          <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

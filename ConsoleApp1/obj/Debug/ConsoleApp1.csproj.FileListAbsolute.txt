@@ -11,3 +11,16 @@ C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\bin\Debug\EntityFramework.
 C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
 C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\Zakki\source\repos\Raport Online\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\Raport Online.dll
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\EntityFramework.dll
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\Raport Online.pdb
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\Raport Online.dll.config
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\bin\Debug\EntityFramework.xml
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+E:\btcamp lawencon\git\dotRaportOnline\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

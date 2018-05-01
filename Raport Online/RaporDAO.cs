@@ -10,7 +10,7 @@ namespace Raport_Online
 {
     public class RaporDAO
     {
-        private fixraporEntities context = new fixraporEntities();
+        private OnlineRaporEntities context = new OnlineRaporEntities();
 
         public RaporDAO()
         {
@@ -128,17 +128,17 @@ namespace Raport_Online
 
         }
 
-        //Mentok lagi di bantu oleh mba novi
-        public void Caridariperiod(int tahun)
-        {
-            var q = from x in context.RAPOR
-                    where x.PERIODE.Year==tahun
-                    select x;
-            foreach (var item in q)
-            {
-                Console.WriteLine(item.KARYAWAN.NAMA_LENGKAP+" "+item.RATA2+" "+item.PERIODE);
-            }
-        }
+        ////Mentok lagi di bantu oleh mba novi
+        //public void Caridariperiod(int tahun)
+        //{
+        //    var q = from x in context.RAPOR
+        //            where x.PERIODE.Year==tahun
+        //            select x;
+        //    foreach (var item in q)
+        //    {
+        //        Console.WriteLine(item.KARYAWAN.NAMA_LENGKAP+" "+item.RATA2+" "+item.PERIODE);
+        //    }
+        //}
 
         //public void print()
         //{

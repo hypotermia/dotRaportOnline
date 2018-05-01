@@ -8,7 +8,7 @@ namespace Raport_Online
 {
     public class KaryawanDAO
     {
-        private fixraporEntities context = new fixraporEntities();
+        private OnlineRaporEntities context = new OnlineRaporEntities();
 
         public KaryawanDAO()
         {

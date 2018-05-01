@@ -14,8 +14,12 @@ namespace Raport_Online
     
     public partial class ASPEK
     {
-        public long ID_ASPEK { get; set; }
-        public Nullable<int> ID_SUB { get; set; }
+        public ASPEK()
+        {
+            this.SUB_ASPEK = new HashSet<SUB_ASPEK>();
+        }
+    
+        public int ID_ASPEK { get; set; }
         public string NAMA_ASPEK { get; set; }
         public string DIBUAT_OLEH { get; set; }
         public System.DateTime DIBUAT_PADA { get; set; }
@@ -23,6 +27,6 @@ namespace Raport_Online
         public Nullable<System.DateTime> DIUBAH_PADA { get; set; }
         public bool STATUS_AKTIF { get; set; }
     
-        public virtual SUB_ASPEK SUB_ASPEK { get; set; }
+        public virtual ICollection<SUB_ASPEK> SUB_ASPEK { get; set; }
     }
 }

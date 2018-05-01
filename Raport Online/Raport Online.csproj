@@ -48,32 +48,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ALAMAT.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="AlamatDAO.cs" />
     <Compile Include="ASPEK.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="AspekDAO.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DEPARTEMEN.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="DepartemenDAO.cs" />
     <Compile Include="DetailAspekDAO.cs" />
     <Compile Include="DETAIL_ASPEK.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="JABATAN.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="JabatanDAO.cs" />
     <Compile Include="KARYAWAN.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="KaryawanDAO.cs" />
     <Compile Include="LOGIN.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginDAO.cs" />
     <Compile Include="Modeling.Context.cs">
@@ -91,17 +91,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Modeling.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelRaporO.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRaporO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelRaporO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelRaporO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRaporO.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RAPOR.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="RaporDAO.cs" />
     <Compile Include="SubAspekDAO.cs" />
     <Compile Include="SUB_ASPEK.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="WILAYAH.cs">
-      <DependentUpon>Modeling.tt</DependentUpon>
+      <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="WilayahDAO.cs" />
   </ItemGroup>
@@ -113,6 +128,13 @@
     </EntityDeploy>
     <None Include="Modeling.edmx.diagram">
       <DependentUpon>Modeling.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="ModelRaporO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelRaporO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelRaporO.edmx.diagram">
+      <DependentUpon>ModelRaporO.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -129,6 +151,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Modeling.edmx</DependentUpon>
       <LastGenOutput>Modeling.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelRaporO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelRaporO.edmx</DependentUpon>
+      <LastGenOutput>ModelRaporO.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelRaporO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelRaporO.edmx</DependentUpon>
+      <LastGenOutput>ModelRaporO.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

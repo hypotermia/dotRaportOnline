@@ -24,9 +24,9 @@ namespace Raport_Online
         public int KAR_ID_KARYAWAN { get; set; }
         public int JUMLAH { get; set; }
         public int RATA2 { get; set; }
-        public System.DateTime BERLAKU { get; set; }
-        public int ID_PENILAI { get; set; }
-        public System.DateTime PERIODE { get; set; }
+        public Nullable<bool> BERLAKU { get; set; }
+        public Nullable<int> ID_PENILAI { get; set; }
+        public Nullable<System.DateTime> PERIODE { get; set; }
         public string DIBUAT_OLEH { get; set; }
         public System.DateTime DIBUAT_PADA { get; set; }
         public string DIUBAH_OLEH { get; set; }

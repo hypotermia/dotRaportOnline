@@ -16,19 +16,19 @@ namespace Raport_Online
     {
         public SUB_ASPEK()
         {
-            this.ASPEK = new HashSet<ASPEK>();
+            this.DETAIL_ASPEK = new HashSet<DETAIL_ASPEK>();
         }
     
         public int ID_SUB { get; set; }
-        public int ID_DETAIL { get; set; }
+        public Nullable<int> ID_ASPEK { get; set; }
         public string NAMA_SUBASPEK { get; set; }
-        public string DIUBAH_OLEH { get; set; }
-        public Nullable<System.DateTime> DIUBAH_PADA { get; set; }
         public string DIBUAT_OLEH { get; set; }
         public System.DateTime DIBUAT_PADA { get; set; }
+        public string DIUBAH_OLEH { get; set; }
+        public Nullable<System.DateTime> DIUBAH_PADA { get; set; }
         public bool STATUS_AKTIF { get; set; }
     
-        public virtual ICollection<ASPEK> ASPEK { get; set; }
-        public virtual DETAIL_ASPEK DETAIL_ASPEK { get; set; }
+        public virtual ASPEK ASPEK { get; set; }
+        public virtual ICollection<DETAIL_ASPEK> DETAIL_ASPEK { get; set; }
     }
 }

@@ -18,14 +18,14 @@ namespace RaporOnlineTes
         //            Assert.AreEqual(expectResult, result);
         //        }
 
-        //        [TestMethod]
-        //        public void TestMethodBenarDetail2()
-        //        {
-        //            int id = 1;
-        //            ASPEK result = aDAO.Detail(id);
+        [TestMethod]//oktes+db
+        public void TestTampilDetailbenar()
+        {
+            int id = 1;
+            ASPEK result = aDAO.Detail(id);
 
-        //            Assert.IsNotNull(result);
-        //        }
+            Assert.IsNotNull(result);
+        }
         //        [TestMethod]
         //        public void TestMethodDetail3()
         //        {
@@ -34,19 +34,20 @@ namespace RaporOnlineTes
 
         //            Assert.IsNotNull(result);
         //        }
-        [TestMethod]
-        public void TestMethodTambahAspek()
-        {
-            ASPEK Asp = new ASPEK();
-            Asp.ID_ASPEK = 2;
-            Asp.DIBUAT_OLEH = "Zakki";
-            Asp.DIBUAT_PADA = DateTime.Now;
-            Asp.STATUS_AKTIF = true;
-            aDAO.Add(Asp);
+        //[TestMethod]//oktes+db
+        //public void TestTambahAspekbenar()
+        //{
+        //    ASPEK Asp = new ASPEK();
+        //    /*Asp.ID_ASPEK = 1;*/
+        //    Asp.NAMA_ASPEK = "aspek";
+        //    Asp.DIBUAT_OLEH = "Zakki";
+        //    Asp.DIBUAT_PADA = DateTime.Now;
+        //    Asp.STATUS_AKTIF = true;
+        //    int a=aDAO.Add(Asp);
 
-            Assert.IsNotNull(aDAO.Add(Asp));
+        //    Assert.IsNotNull(a);
 
-        }
+        //}
         //        [TestMethod]
         //        public void TambahAspekGagal()
         //        {
@@ -67,47 +68,39 @@ namespace RaporOnlineTes
         //            Assert.IsNull(a);
         //        }
 
-        //[TestMethod]
-        //public void EditAspect()
-        //{
-        //    ASPEK aspek = aDAO.Detail(2);
-        //    Assert.IsNotNull(aspek);
+        //        [TestMethod]
+        //        public void EditAspect(int id, ASPEK aspek)
+        //        {
+        //            if (aspek == null)
+        //            {
+        //                throw new ArgumentNullException(nameof(aspek));
+        //            }
+        //            aspek.NAMA_ASPEK = null;
+        //            int a = aDAO.Edit(1, aspek);
 
-        //if (aspek.ID_ASPEK == null)
-        //{
-        //    throw new ArgumentNullException("Error Message");
-        //}
-        //aspek.NAMA_ASPEK = "Try it ";
-        //aspek.DIUBAH_OLEH = "Zakki";
-        //aspek.DIUBAH_PADA = DateTime.Now;
-        //aDAO.Edit(1, aspek);
+        //            Assert.IsNotNull(a);
+        //        }
+        [TestMethod]//oktess+db
+        public void TesEditAspectbenar()
+        {
+            ASPEK aspek = aDAO.Detail(1);
+            Assert.IsNotNull(aspek);
+            aspek.NAMA_ASPEK = "Komplit pake banget";
+            aspek.DIUBAH_OLEH = "suci";
+            aspek.DIUBAH_PADA = DateTime.Now;
+            aspek.STATUS_AKTIF = true;
+            var a = aDAO.Edit(1, aspek);
 
-        //    aDAO.Edit(2, aspek);
-        //}
+            Assert.AreEqual(1, a);
+        }
+        [TestMethod]//oktes+db
+        public void TesDeleteAspekbenar()
+        {
+            ASPEK aspek = aDAO.Detail(4);
+            Assert.IsNotNull(aspek);
+            bool isPermanent = false;
 
-
-        //[TestMethod]
-        //public void EditAspect1(int id, ASPEK aspek)
-        //{
-        //    if (aspek == null)
-        //    {
-        //        throw new ArgumentNullException(nameof(aspek));
-        //    }
-        //    aspek.NAMA_ASPEK = "Anjaaaaaaay";
-        //    int a = aDAO.Edit(1, aspek);
-
-        //    Assert.IsNotNull(a);
-        //}
-
-        //[TestMethod]
-        //public void Delete()
-        //{
-        //    ASPEK aspek = aDAO.Detail(2);
-        //    Assert.IsNotNull(aspek);
-        //    bool isPermanent = false;
-
-        //    var anu = aDAO.Delete(1, false);
-
-        //}
+            var anu = aDAO.Delete(4, true);
+        }
     }
 }

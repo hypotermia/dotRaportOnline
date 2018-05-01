@@ -21,13 +21,13 @@ namespace Raport_Online
         }
     
         public int ID_WILAYAH { get; set; }
-        public int WIL_ID_WILAYAH { get; set; }
+        public Nullable<int> WIL_ID_WILAYAH { get; set; }
         public string NAMA_WIL { get; set; }
-        public int LEVEL { get; set; }
-        public string DIUBAH_OLEH { get; set; }
-        public Nullable<System.DateTime> DIUBAH_PADA { get; set; }
+        public Nullable<int> LEVEL { get; set; }
         public string DIBUAT_OLEH { get; set; }
         public System.DateTime DIBUAT_PADA { get; set; }
+        public string DIUBAH_OLEH { get; set; }
+        public Nullable<System.DateTime> DIUBAH_PADA { get; set; }
         public bool STATUS_AKTIF { get; set; }
     
         public virtual ICollection<ALAMAT> ALAMAT { get; set; }

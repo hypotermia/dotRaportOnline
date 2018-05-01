@@ -14,17 +14,13 @@ namespace Raport_Online
     
     public partial class DETAIL_ASPEK
     {
-        public DETAIL_ASPEK()
-        {
-            this.SUB_ASPEK = new HashSet<SUB_ASPEK>();
-        }
-    
         public int ID_DETAIL { get; set; }
+        public Nullable<int> ID_SUB { get; set; }
         public Nullable<int> ID_RAPOR { get; set; }
         public Nullable<int> NILAI_K_A { get; set; }
         public Nullable<int> NILAI_K_B { get; set; }
     
         public virtual RAPOR RAPOR { get; set; }
-        public virtual ICollection<SUB_ASPEK> SUB_ASPEK { get; set; }
+        public virtual SUB_ASPEK SUB_ASPEK { get; set; }
     }
 }
