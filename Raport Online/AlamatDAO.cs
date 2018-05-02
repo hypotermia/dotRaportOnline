@@ -14,7 +14,7 @@ namespace Raport_Online
         {
 
         }
-        public int add(ALAMAT alamat)
+        public int Add(ALAMAT alamat)
         {
             var result = 0;
             try
@@ -29,7 +29,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, ALAMAT alamat)
+        public int Edit(int id, ALAMAT alamat)
         {
             var result = 0;
             try
@@ -49,12 +49,12 @@ namespace Raport_Online
         }
 
 
-        public ALAMAT detail(int id)
+        public ALAMAT Detail(int id)
         {
             return context.ALAMAT.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 

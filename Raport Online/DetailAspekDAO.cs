@@ -15,7 +15,7 @@ namespace Raport_Online
 
         }
 
-        public int add(DETAIL_ASPEK detailaspek)
+        public int Add(DETAIL_ASPEK detailaspek)
         {
             var result = 0;
             try
@@ -30,7 +30,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, DETAIL_ASPEK detailaspek)
+        public int Edit(int id, DETAIL_ASPEK detailaspek)
         {
             var result = 0;
             try
@@ -50,12 +50,12 @@ namespace Raport_Online
         }
 
 
-        public DETAIL_ASPEK detail(int id)
+        public DETAIL_ASPEK Detail(int id)
         {
             return context.DETAIL_ASPEK.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 

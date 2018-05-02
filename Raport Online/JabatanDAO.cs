@@ -15,7 +15,7 @@ namespace Raport_Online
 
         }
 
-        public int add(JABATAN jabatan)
+        public int Add(JABATAN jabatan)
         {
             var result = 0;
             try
@@ -30,7 +30,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, JABATAN jabatan)
+        public int Edit(int id, JABATAN jabatan)
         {
             var result = 0;
             try
@@ -50,12 +50,12 @@ namespace Raport_Online
         }
 
 
-        public JABATAN detail(int id)
+        public JABATAN Detail(int id)
         {
             return context.JABATAN.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 
