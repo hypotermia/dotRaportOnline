@@ -23,7 +23,7 @@ namespace Raport_Online
             try
             {
                 context.RAPOR.Add(rapor);
-                result=context.SaveChanges();
+                result = context.SaveChanges();
             }
             catch
             {
@@ -38,7 +38,7 @@ namespace Raport_Online
             try
             {
                 var exsitingrapor = context.RAPOR.Find(id);
-                exsitingrapor.BERLAKU= rapor.BERLAKU;
+                exsitingrapor.BERLAKU = rapor.BERLAKU;
                 exsitingrapor.RATA2 = rapor.RATA2;
 
                 result = context.SaveChanges();
@@ -67,7 +67,7 @@ namespace Raport_Online
                 if (!isPermanent)
                 {
                     exsitingrapor.DIBUAT_PADA = DateTime.Now;
-                    exsitingrapor.STATUS_AKTIF= false;
+                    exsitingrapor.STATUS_AKTIF = false;
                 }
 
                 else
@@ -97,7 +97,7 @@ namespace Raport_Online
                     select x;
             foreach (var item in q)
             {
-                Console.WriteLine(item.ID_RAPOR+" "+item.RATA2);
+                Console.WriteLine(item.ID_RAPOR + " " + item.RATA2);
             }
         }
         //mentok
@@ -108,7 +108,7 @@ namespace Raport_Online
                     select x;
             foreach (var item in q)
             {
-                Console.WriteLine(item.ID_RAPOR+" "+item.RATA2);
+                Console.WriteLine(item.ID_RAPOR + " " + item.RATA2);
             }
         }
 
@@ -118,12 +118,12 @@ namespace Raport_Online
             var maxValue = context.RAPOR.Max(x => x.RATA2);
             //var q = context.RAPOR.First(x => x.RATA2 == maxValue);
             var q = from x in context.RAPOR
-                    where x.RATA2==maxValue
-                     select x;
+                    where x.RATA2 == maxValue
+                    select x;
             //Console.WriteLine(q.KARYAWAN.NAMA_LENGKAP+" "+q.RATA2);
             foreach (var item in q)
             {
-                Console.WriteLine(item.KARYAWAN.NAMA_LENGKAP+" "+item.ID_RAPOR + " " + item.RATA2);
+                Console.WriteLine(item.KARYAWAN.NAMA_LENGKAP + " " + item.ID_RAPOR + " " + item.RATA2);
             }
 
         }

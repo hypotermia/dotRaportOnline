@@ -6,15 +6,14 @@ using Raport_Online;
 namespace RaporOnlineTes
 {
     [TestClass]
-    public class DAOKaryawanTes
+    public class DAOWilayahTes
     {
-        private KaryawanDAO aDAO = new KaryawanDAO();
-        [TestMethod]
+        private WilayahDAO aDAO = new WilayahDAO();
         public void TestMethodDetail()
         {
             int id = 0;
-            JABATAN expectResult = null;
-            JABATAN result = aDAO.Detail(id);
+            WILAYAH expectResult = null;
+            WILAYAH result = aDAO.Detail(id);
 
             Assert.AreEqual(expectResult, result);
         }
@@ -23,14 +22,14 @@ namespace RaporOnlineTes
         public void TestMethodDetail2()
         {
             int id = 1;
-            KARYAWAN result = aDAO.Detail(id);
+            WILAYAH result = aDAO.Detail(id);
             Assert.IsNotNull(result);
         }
         [TestMethod]
         public void TestMethodDetail3()
         {
             int id = 01;
-            KARYAWAN result = aDAO.Detail(id);
+            WILAYAH result = aDAO.Detail(id);
             Assert.IsNotNull(result);
         }
         [TestMethod]//okpass
@@ -38,67 +37,62 @@ namespace RaporOnlineTes
         {
             int id = 1;
             var det = aDAO.Detail(id);
-            Assert.AreEqual("Jl.Merdeka", det.ALAMAT);
+            Assert.AreEqual("wilayah", det.NAMA_WIL);
         }
         [TestMethod]//okpass
         public void TestGetall()
         {
-            Assert.IsNotNull(aDAO.getAll());
+            Assert.IsNotNull(aDAO.GetAll());
         }
         [TestMethod]//oktes+db
-        public void TesTambahKarybenar()
+        public void TesTambahbenar()
         {
-            KARYAWAN det = new KARYAWAN();
-            det.NAMA_LENGKAP = "Saya";
-            det.JENIS_KELAMIN = "apa";
-            det.AGAMA = "Islam";
-            det.STATUS_PERKAWINAN = "Belum";
-            det.PENDIDIKAN = "S1 Manajemen";
+            WILAYAH det = new WILAYAH();
+            det.NAMA_WIL = "wilayah";
             int a = aDAO.Add(det);
-            Trace.WriteLine(det.ID_JABATAN);
-            Trace.WriteLine(det.ID_DEPARTEMEN);
-            
+
+
             Assert.IsNotNull(a);
 
         }
         [TestMethod]//okpass+db
-        public void TesTambahKaryGagal()
+        public void TesTambahGagal()
         {
-            KARYAWAN det = new KARYAWAN();
-            det.NAMA_LENGKAP = "Programmer";
+            WILAYAH det = new WILAYAH();
+            det.NAMA_WIL = "wila";
             int a = aDAO.Add(det);
-            Trace.WriteLine(det.ID_JABATAN);
-            Trace.WriteLine(det.ID_DEPARTEMEN);
+           
+
             Assert.IsNotNull(a);
         }
         [TestMethod]//oktess+db
-        public void TesEditKarybenar()
+        public void TesEditbenar()
         {
-            KARYAWAN det = aDAO.Detail(2);
+            WILAYAH det = aDAO.Detail(2);
             Assert.IsNotNull(det);
-            det.NAMA_LENGKAP = "wak";
+            det.NAMA_WIL = "wil";
             var a = aDAO.Edit(2, det);
 
             Assert.AreEqual(1, a);
         }
         [TestMethod]//oktess+db
-        public void TesEditKarySalah()
+        public void TesEditSalah()
         {
-            KARYAWAN det = aDAO.Detail(0);
+            WILAYAH det = aDAO.Detail(0);
             Assert.IsNotNull(det);
-            det.NAMA_LENGKAP = "wakawk";
+            det.NAMA_WIL = "wil";
             var a = aDAO.Edit(0, det);
 
             Assert.AreEqual(0, a);
         }
         [TestMethod]//oktes+db
-        public void TesDeleteKarybenar()
+        public void TesDeletebenar()
         {
-            KARYAWAN det = aDAO.Detail(17);
+            WILAYAH det = aDAO.Detail(17);
             Assert.IsNotNull(det);
             bool isPermanent = false;
 
-            var a = aDAO.Delete(17, false);
+            var a = aDAO.delete(17, false);
         }
     }
 }

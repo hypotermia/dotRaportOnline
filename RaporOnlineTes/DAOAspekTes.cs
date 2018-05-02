@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Raport_Online;
 
@@ -8,6 +9,7 @@ namespace RaporOnlineTes
     public class DAOAspekTes
     {
         AspekDAO aDAO = new AspekDAO();
+        [Timeout(1000)]
         [TestMethod]
         public void TestTampilDetailSalah()
         {
@@ -16,6 +18,7 @@ namespace RaporOnlineTes
             ASPEK result = aDAO.Detail(id);
 
             Assert.AreEqual(expectResult, result);
+            Thread.Sleep(2000);
         }
 
         [TestMethod]//oktes+db

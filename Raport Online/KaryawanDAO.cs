@@ -15,7 +15,7 @@ namespace Raport_Online
 
         }
 
-        public int add(KARYAWAN karyawan)
+        public int Add(KARYAWAN karyawan)
         {
             var result = 0;
             try
@@ -30,7 +30,7 @@ namespace Raport_Online
             return result;
         }
 
-        public int edit(int id, KARYAWAN karyawan)
+        public int Edit(int id, KARYAWAN karyawan)
         {
             var result = 0;
             try
@@ -50,12 +50,12 @@ namespace Raport_Online
         }
 
 
-        public KARYAWAN detail(int id)
+        public KARYAWAN Detail(int id)
         {
             return context.KARYAWAN.Find(id);
         }
 
-        public int delete(int id, bool isPermanent)
+        public int Delete(int id, bool isPermanent)
         {
             int result = 0;
 

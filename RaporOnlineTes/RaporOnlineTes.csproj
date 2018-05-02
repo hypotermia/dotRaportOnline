@@ -53,6 +53,9 @@
     <Compile Include="DAODepartemenTes.cs" />
     <Compile Include="DAODetailAspekTes.cs" />
     <Compile Include="DAOJabatanTes.cs" />
+    <Compile Include="DAOKaryawanTes.cs" />
+    <Compile Include="DAOLoginTes.cs" />
+    <Compile Include="DAORaporTes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
