@@ -43,7 +43,7 @@ namespace Raport_Online
                 exsitingaspek.NAMA_ASPEK = aspek.NAMA_ASPEK;
                 exsitingaspek.DIBUAT_OLEH = aspek.DIBUAT_OLEH;
                 exsitingaspek.DIBUAT_PADA = aspek.DIBUAT_PADA;
-                context.ASPEK.Add(exsitingaspek);
+                //context.ASPEK.Add(exsitingaspek);
                 result = context.SaveChanges();
             }
             catch
