@@ -114,7 +114,7 @@ namespace RaporOnlineTes
             ASPEK aspek = aDAO.Detail(17);
             Assert.IsNotNull(aspek);
             bool isPermanent = false;
-
+           
             var a = aDAO.Delete(17, false);
         }
        
