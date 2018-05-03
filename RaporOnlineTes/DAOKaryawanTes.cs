@@ -9,36 +9,20 @@ namespace RaporOnlineTes
     public class DAOKaryawanTes
     {
         private KaryawanDAO aDAO = new KaryawanDAO();
+        
         [TestMethod]
-        public void TestMethodDetail()
-        {
-            int id = 0;
-            JABATAN expectResult = null;
-            JABATAN result = aDAO.Detail(id);
-
-            Assert.AreEqual(expectResult, result);
-        }
-
-        [TestMethod]
-        public void TestMethodDetail2()
+        public void TestTampilDetailByIDBenar()
         {
             int id = 1;
-            KARYAWAN result = aDAO.Detail(id);
-            Assert.IsNotNull(result);
-        }
-        [TestMethod]
-        public void TestMethodDetail3()
-        {
-            int id = 01;
             KARYAWAN result = aDAO.Detail(id);
             Assert.IsNotNull(result);
         }
         [TestMethod]//okpass
-        public void TestMethodJabatanBenar()
+        public void TestTampilByNamaBenar()
         {
             int id = 1;
             var det = aDAO.Detail(id);
-            Assert.AreEqual("Jl.Merdeka", det.ALAMAT);
+            Assert.AreEqual("Ayu", det.NAMA_LENGKAP);
         }
         [TestMethod]//okpass
         public void TestGetall()
@@ -59,7 +43,6 @@ namespace RaporOnlineTes
             Trace.WriteLine(det.ID_DEPARTEMEN);
             
             Assert.IsNotNull(a);
-
         }
         [TestMethod]//okpass+db
         public void TesTambahKaryGagal()
@@ -78,7 +61,6 @@ namespace RaporOnlineTes
             Assert.IsNotNull(det);
             det.NAMA_LENGKAP = "wak";
             var a = aDAO.Edit(2, det);
-
             Assert.AreEqual(1, a);
         }
         [TestMethod]//oktess+db

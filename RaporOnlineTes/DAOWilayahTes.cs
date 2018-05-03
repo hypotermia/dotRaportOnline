@@ -9,7 +9,7 @@ namespace RaporOnlineTes
     public class DAOWilayahTes
     {
         private WilayahDAO aDAO = new WilayahDAO();
-        public void TestMethodDetail()
+        public void TestTampilDetailSalah()
         {
             int id = 0;
             WILAYAH expectResult = null;
@@ -19,21 +19,14 @@ namespace RaporOnlineTes
         }
 
         [TestMethod]
-        public void TestMethodDetail2()
+        public void TestTampilDetailBenar()
         {
             int id = 1;
             WILAYAH result = aDAO.Detail(id);
             Assert.IsNotNull(result);
         }
-        [TestMethod]
-        public void TestMethodDetail3()
-        {
-            int id = 01;
-            WILAYAH result = aDAO.Detail(id);
-            Assert.IsNotNull(result);
-        }
         [TestMethod]//okpass
-        public void TestMethodJabatanBenar()
+        public void TestTampilJabatanByNamaBenar()
         {
             int id = 1;
             var det = aDAO.Detail(id);
@@ -45,7 +38,7 @@ namespace RaporOnlineTes
             Assert.IsNotNull(aDAO.GetAll());
         }
         [TestMethod]//oktes+db
-        public void TesTambahbenar()
+        public void TesTambahWilayahbenar()
         {
             WILAYAH det = new WILAYAH();
             det.NAMA_WIL = "wilayah";
@@ -56,7 +49,7 @@ namespace RaporOnlineTes
 
         }
         [TestMethod]//okpass+db
-        public void TesTambahGagal()
+        public void TesTambahWilayahGagal()
         {
             WILAYAH det = new WILAYAH();
             det.NAMA_WIL = "wila";
@@ -66,7 +59,7 @@ namespace RaporOnlineTes
             Assert.IsNotNull(a);
         }
         [TestMethod]//oktess+db
-        public void TesEditbenar()
+        public void TesEditWilayahbenar()
         {
             WILAYAH det = aDAO.Detail(2);
             Assert.IsNotNull(det);
@@ -76,7 +69,7 @@ namespace RaporOnlineTes
             Assert.AreEqual(1, a);
         }
         [TestMethod]//oktess+db
-        public void TesEditSalah()
+        public void TesEditWilayahSalah()
         {
             WILAYAH det = aDAO.Detail(0);
             Assert.IsNotNull(det);
@@ -86,7 +79,7 @@ namespace RaporOnlineTes
             Assert.AreEqual(0, a);
         }
         [TestMethod]//oktes+db
-        public void TesDeletebenar()
+        public void TesDeleteWilayahbenar()
         {
             WILAYAH det = aDAO.Detail(17);
             Assert.IsNotNull(det);
