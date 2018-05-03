@@ -90,7 +90,7 @@ namespace Raport_Online
             return context.RAPOR.ToList();
         }
 
-        public void Caridarikar(string a)
+        public List<KARYAWAN> CariBynamaKaryawan(string a)
         {
             var q = from x in context.RAPOR
                     where x.KARYAWAN.NAMA_LENGKAP.Contains(a)
@@ -99,21 +99,23 @@ namespace Raport_Online
             {
                 Console.WriteLine(item.ID_RAPOR + " " + item.RATA2);
             }
+            return context.KARYAWAN.ToList();
         }
         //mentok
-        public void Caridaripenilai(string penilai)
+        public List<KARYAWAN> CariBynamaPenilai(string penilai)
         {
             var q = from x in context.RAPOR
                     where x.KARYAWAN1.NAMA_LENGKAP.Contains(penilai)
                     select x;
             foreach (var item in q)
             {
-                Console.WriteLine(item.ID_RAPOR + " " + item.RATA2);
+                Console.WriteLine(item.ID_RAPOR+ " " + item.RATA2);
             }
+            return context.KARYAWAN.ToList();
         }
 
         //mentok lagi dibantu oleh mba novi
-        public void CariRata2tinggi()
+        public List<RAPOR> CariRata2tinggi()
         {
             var maxValue = context.RAPOR.Max(x => x.RATA2);
             //var q = context.RAPOR.First(x => x.RATA2 == maxValue);
@@ -125,6 +127,7 @@ namespace Raport_Online
             {
                 Console.WriteLine(item.KARYAWAN.NAMA_LENGKAP + " " + item.ID_RAPOR + " " + item.RATA2);
             }
+            return context.RAPOR.ToList();
 
         }
 
