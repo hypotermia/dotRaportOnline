@@ -28,3 +28,5 @@ E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.csp
 E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.csproj.CopyComplete
 E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.dll
 E:\btcamp lawencon\git\dotRaportOnline\Raport Online\obj\Debug\Raport Online.pdb
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\NLog.dll
+E:\btcamp lawencon\git\dotRaportOnline\Raport Online\bin\Debug\NLog.xml

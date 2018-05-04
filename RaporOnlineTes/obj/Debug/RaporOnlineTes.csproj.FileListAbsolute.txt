@@ -58,3 +58,6 @@ E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.c
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CopyComplete
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.dll
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.pdb
+E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\NLog.dll
+E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\NLog.xml
+E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\NLog.config

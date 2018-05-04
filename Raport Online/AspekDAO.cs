@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,9 @@ namespace Raport_Online
 {
     public class AspekDAO
     {
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private OnlineRaporEntities context = new OnlineRaporEntities();
-
-        public AspekDAO()
-        {
-
-        }
+        public AspekDAO() { }
         //acess modifier , type data keluaran(typeoutput), nama method ,(parameter(typedata , objek)) 
         public int Add(ASPEK aspek)
         {
@@ -25,19 +23,20 @@ namespace Raport_Online
                 result = context.SaveChanges();
 
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
-
         public int Edit(int id, ASPEK aspek)
         {
             var result = 0;
             try
             {
-                
                 var exsitingaspek = context.ASPEK.Find(id);
                 exsitingaspek.SUB_ASPEK = aspek.SUB_ASPEK;
                 exsitingaspek.NAMA_ASPEK = aspek.NAMA_ASPEK;
@@ -46,14 +45,15 @@ namespace Raport_Online
                 //context.ASPEK.Add(exsitingaspek);
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
-                
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
-
+            logger.Debug(result);
             return result; 
-        }
+            }
 
 
         public ASPEK Detail(int id)
@@ -81,17 +81,42 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
 
         public List<ASPEK> GetAll()
         {
+            var q = from x in context.ASPEK
+                    where x.STATUS_AKTIF.Equals(true)
+                    select x;
+            foreach (var item in q)
+            {
+                Console.WriteLine(item.ID_ASPEK + " " + item.NAMA_ASPEK);
+            }
+            return context.ASPEK.ToList();
+        }
+        public List<ASPEK> TampilByNamaAspek()
+        {
+            var q = from x in context.ASPEK
+                    where x.NAMA_ASPEK.Contains("a")
+                    select x;
+            foreach (var item in q)
+            {
+                Console.WriteLine(item.NAMA_ASPEK);
+            }
             return context.ASPEK.ToList();
         }
 
+        public List<ASPEK> TampilByNamaAspek(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

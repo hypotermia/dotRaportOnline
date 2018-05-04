@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Raport_Online
    public class DetailAspekDAO
     {
         private OnlineRaporEntities context = new OnlineRaporEntities();
-
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger(); 
         public DetailAspekDAO()
         {
 
@@ -23,10 +24,13 @@ namespace Raport_Online
                 context.DETAIL_ASPEK.Add(detailaspek);
                 result=context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
 
@@ -41,11 +45,13 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
-
+            logger.Debug(result);
             return result;
         }
 
@@ -75,10 +81,13 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
 
@@ -87,5 +96,38 @@ namespace Raport_Online
             return context.DETAIL_ASPEK.ToList();
         }
 
+        public List<DETAIL_ASPEK> TampilByIDRapor(int v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<DETAIL_ASPEK> TampilByIDRapor()
+        {
+            var q = from x in context.DETAIL_ASPEK
+                    where x.ID_RAPOR.Equals(1)
+                    select x;
+            foreach (var item in q)
+            {
+                Console.Write(item.ID_RAPOR);
+            }
+            return context.DETAIL_ASPEK.ToList();
+        }
+
+        public List<DETAIL_ASPEK> TampilByIDSubaspek(int v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<DETAIL_ASPEK> TampilByIDSubaspek()
+        {
+            var q = from x in context.DETAIL_ASPEK
+                    where x.ID_SUB.Equals(1)
+                    select x;
+            foreach (var item in q)
+            {
+                Console.Write(item.ID_SUB);
+            }
+            return context.DETAIL_ASPEK.ToList();
+        }
     }
 }

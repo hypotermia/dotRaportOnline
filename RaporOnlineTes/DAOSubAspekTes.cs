@@ -9,7 +9,7 @@ namespace RaporOnlineTes
     public class DAOSubAspekTes
     {
         private SubAspekDAO aDAO = new SubAspekDAO();
-        public void TestMethodDetail()
+        public void TestTampilDetailSubasSalah()
         {
             int id = 0;
             SUB_ASPEK expectResult = null;
@@ -17,58 +17,45 @@ namespace RaporOnlineTes
 
             Assert.AreEqual(expectResult, result);
         }
-
         [TestMethod]
-        public void TestMethodDetail2()
+        public void TestTampilDetailSubasBenar()
         {
             int id = 1;
             SUB_ASPEK result = aDAO.Detail(id);
             Assert.IsNotNull(result);
         }
-        [TestMethod]
-        public void TestMethodDetail3()
-        {
-            int id = 01;
-            SUB_ASPEK result = aDAO.Detail(id);
-            Assert.IsNotNull(result);
-        }
         [TestMethod]//okpass
-        public void TestMethodBenar()
+        public void TestTampilSubasByNamaBenar()
         {
             int id = 1;
             var det = aDAO.Detail(id);
             Assert.AreEqual("subaspek", det.NAMA_SUBASPEK);
         }
         [TestMethod]//okpass
-        public void TestGetall()
+        public void TestSubaspekGetall()
         {
             Assert.IsNotNull(aDAO.GetAll());
         }
         [TestMethod]//oktes+db
-        public void TesTambahbenar()
+        public void TesTambahSubaspekbenar()
         {
             SUB_ASPEK det = new SUB_ASPEK();
             det.NAMA_SUBASPEK = "SubaspekA";
             int a = aDAO.Add(det);
-
-
+            Trace.WriteLine(det.ID_ASPEK);
             Assert.IsNotNull(a);
-
         }
         [TestMethod]//okpass+db
-        public void TesTambahGagal()
+        public void TesTambahSubaspekGagal()
         {
             SUB_ASPEK det = new SUB_ASPEK();
             det.NAMA_SUBASPEK = "Sub";
-            
             int a = aDAO.Add(det);
             Trace.WriteLine(det.ID_ASPEK);
-          
-
             Assert.IsNotNull(a);
         }
         [TestMethod]//oktess+db
-        public void TesEditbenar()
+        public void TesEditSubaspekbenar()
         {
             SUB_ASPEK det = aDAO.Detail(2);
             Assert.IsNotNull(det);
@@ -78,7 +65,7 @@ namespace RaporOnlineTes
             Assert.AreEqual(1, a);
         }
         [TestMethod]//oktess+db
-        public void TesEditSalah()
+        public void TesEditSubaspekSalah()
         {
             SUB_ASPEK det = aDAO.Detail(0);
             Assert.IsNotNull(det);
@@ -88,7 +75,7 @@ namespace RaporOnlineTes
             Assert.AreEqual(0, a);
         }
         [TestMethod]//oktes+db
-        public void TesDeletebenar()
+        public void TesDeleteSubaspekbenar()
         {
             SUB_ASPEK det = aDAO.Detail(17);
             Assert.IsNotNull(det);

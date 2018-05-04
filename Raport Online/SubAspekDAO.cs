@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,8 @@ namespace Raport_Online
     public class SubAspekDAO
     {
         private OnlineRaporEntities context = new OnlineRaporEntities();
-
-        public SubAspekDAO()
-        {
-
-        }
-
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        public SubAspekDAO() { }
         public int Add(SUB_ASPEK subaspek)
         {
             var result = 0;
@@ -23,10 +20,13 @@ namespace Raport_Online
                 context.SUB_ASPEK.Add(subaspek);
                 result=context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
 
@@ -41,11 +41,13 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
-
+            logger.Debug(result);
             return result;
         }
 
@@ -75,17 +77,54 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
-
         public List<SUB_ASPEK> GetAll()
         {
             return context.SUB_ASPEK.ToList();
         }
+        public List<SUB_ASPEK> TampilByNamaSubaspek()
+        {
+            var q = from x in context.SUB_ASPEK
+                    where x.NAMA_SUBASPEK.Contains("a")
+                    select x;
+            foreach (var item in q)
+            {
+                Console.WriteLine(item.NAMA_SUBASPEK);
+            }
+            return context.SUB_ASPEK.ToList();
+        }
+        public List<SUB_ASPEK> TampilByNamaSubAs()
+        {
+            var q = from x in context.SUB_ASPEK
+                    where x.NAMA_SUBASPEK.Contains("a")
+                    select x;
+            foreach (var item in q)
+            {
+                Console.WriteLine(item.NAMA_SUBASPEK);
+            }
+            return context.SUB_ASPEK.ToList();
+        }
+        public List<SUB_ASPEK> TampilByNamaAspek()
+        {
+            var q = from x in context.SUB_ASPEK
+                    where x.ASPEK.NAMA_ASPEK.Contains("a")
+                    select x;
+            foreach (var item in q)
+            {
+                Console.WriteLine(item.ID_ASPEK+" "+item.ID_SUB+ " "+item.NAMA_SUBASPEK);
+            }
+            return context.SUB_ASPEK.ToList();
+        }
+
+
 
     }
 }

@@ -5,18 +5,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NLog;
 
 namespace Raport_Online
 {
     public class RaporDAO
     {
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private OnlineRaporEntities context = new OnlineRaporEntities();
-
-        public RaporDAO()
-        {
-
-        }
-
+        public RaporDAO() { }
         public int Add(RAPOR rapor)
         {
             var result = 0;
@@ -25,10 +22,13 @@ namespace Raport_Online
                 context.RAPOR.Add(rapor);
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
 
@@ -43,11 +43,13 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
-
+            logger.Debug(result);
             return result;
         }
 
@@ -77,16 +79,26 @@ namespace Raport_Online
 
                 result = context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
                 result = -1;
+                logger.Error(ex.Message);
+                logger.Error(ex.InnerException);
             }
+            logger.Debug(result);
             return result;
         }
 
         public List<RAPOR> GetAll()
         {
-
+            var q = from x in context.KARYAWAN
+                    where x.STATUS_AKTIF.Equals(true)
+                    select x;
+            foreach (var item in q)
+            {
+                Console.WriteLine(item.ID_KARYAWAN + " " + item.STATUS_AKTIF);
+            }
+               
             return context.RAPOR.ToList();
         }
 
@@ -115,7 +127,7 @@ namespace Raport_Online
         }
 
         //mentok lagi dibantu oleh mba novi
-        public List<RAPOR> CariRata2tinggi()
+        public List<RAPOR> CariRataTertinggi()
         {
             var maxValue = context.RAPOR.Max(x => x.RATA2);
             //var q = context.RAPOR.First(x => x.RATA2 == maxValue);

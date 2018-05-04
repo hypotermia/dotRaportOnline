@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -117,6 +118,13 @@ namespace RaporOnlineTes
            
             var a = aDAO.Delete(17, false);
         }
-       
+        [TestMethod]
+        public void TestTampilBynama()
+        {
+            List<ASPEK> det = aDAO.TampilByNamaAspek("a");
+            Assert.Equals(5, det.Count);
+        }
+        
+
     }
 }

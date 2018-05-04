@@ -9,7 +9,7 @@ namespace RaporOnlineTes
     {
         DepartemenDAO aDAO = new DepartemenDAO();
         [TestMethod]
-        public void TestTampilDetailSalah()
+        public void TestTampilDetailDepartSalah()
         {
             int id = 0;
             DEPARTEMEN expectResult = null;
@@ -19,7 +19,7 @@ namespace RaporOnlineTes
         }
 
         [TestMethod]//oktes+db
-        public void TestTampilDetailbenar()
+        public void TestTampilDetailDepartbenar()
         {
             int id = 1;
             DEPARTEMEN result = aDAO.Detail(id);
@@ -27,7 +27,7 @@ namespace RaporOnlineTes
             Assert.IsNotNull(result);
         }
         [TestMethod]//okpass
-        public void TestMethodDetailBenar()
+        public void TestMethodDetailDepartBenar()
         {
             int id = 1;
             DEPARTEMEN dep = aDAO.Detail(id);
