@@ -18,16 +18,20 @@ namespace Raport_Online
             try
             {
                 context.SUB_ASPEK.Add(subaspek);
-                result=context.SaveChanges();
+                return context.SaveChanges();
             }
             catch(Exception ex)
             {
-                result = -1;
-                logger.Error(ex.Message);
-                logger.Error(ex.InnerException);
+                //log class
+                //log message
+                //log inner
+                throw ex;
+                //logger.Error(ex.GetType());
+                //logger.Error(ex.Message);
+                //logger.Error(ex.InnerException);
             }
-            logger.Debug(result);
-            return result;
+            
+            
         }
 
         public int Edit(int id, SUB_ASPEK subaspek)
@@ -101,17 +105,7 @@ namespace Raport_Online
             }
             return context.SUB_ASPEK.ToList();
         }
-        public List<SUB_ASPEK> TampilByNamaSubAs()
-        {
-            var q = from x in context.SUB_ASPEK
-                    where x.NAMA_SUBASPEK.Contains("a")
-                    select x;
-            foreach (var item in q)
-            {
-                Console.WriteLine(item.NAMA_SUBASPEK);
-            }
-            return context.SUB_ASPEK.ToList();
-        }
+       
         public List<SUB_ASPEK> TampilByNamaAspek()
         {
             var q = from x in context.SUB_ASPEK

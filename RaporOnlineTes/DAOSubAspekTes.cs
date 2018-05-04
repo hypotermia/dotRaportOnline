@@ -43,16 +43,17 @@ namespace RaporOnlineTes
             det.NAMA_SUBASPEK = "SubaspekA";
             int a = aDAO.Add(det);
             Trace.WriteLine(det.ID_ASPEK);
-            Assert.IsNotNull(a);
+            Assert.AreEqual(1,a);
         }
         [TestMethod]//okpass+db
+        [ExpectedException(typeof(DbEntityValidationException))]
         public void TesTambahSubaspekGagal()
         {
             SUB_ASPEK det = new SUB_ASPEK();
             det.NAMA_SUBASPEK = "Sub";
             int a = aDAO.Add(det);
             Trace.WriteLine(det.ID_ASPEK);
-            Assert.IsNotNull(a);
+            
         }
         [TestMethod]//oktess+db
         public void TesEditSubaspekbenar()

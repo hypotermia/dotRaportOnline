@@ -9,7 +9,7 @@ namespace Raport_Online
     public class AlamatDAO
     {
         private OnlineRaporEntities context = new OnlineRaporEntities();
-
+        
         public AlamatDAO()
         {
 
