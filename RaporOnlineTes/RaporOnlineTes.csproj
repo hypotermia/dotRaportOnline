@@ -69,6 +69,7 @@
     <Compile Include="DAORaporTes.cs" />
     <Compile Include="DAOSubAspekTes.cs" />
     <Compile Include="DAOWilayahTes.cs" />
+    <Compile Include="DbEntityValidationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

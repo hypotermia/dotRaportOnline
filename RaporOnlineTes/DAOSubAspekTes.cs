@@ -41,16 +41,21 @@ namespace RaporOnlineTes
         {
             SUB_ASPEK det = new SUB_ASPEK();
             det.NAMA_SUBASPEK = "SubaspekA";
+            det.DIBUAT_OLEH = "saya";
+            det.DIBUAT_PADA = DateTime.Now;
+            det.STATUS_AKTIF = true;
             int a = aDAO.Add(det);
             Trace.WriteLine(det.ID_ASPEK);
             Assert.AreEqual(1,a);
         }
-        [TestMethod]//okpass+db
+        [TestMethod]//kondisi properties tidak diisi dengan lengkap
         [ExpectedException(typeof(DbEntityValidationException))]
         public void TesTambahSubaspekGagal()
         {
             SUB_ASPEK det = new SUB_ASPEK();
             det.NAMA_SUBASPEK = "Sub";
+            det.DIBUAT_OLEH = "saya";
+            det.DIBUAT_PADA = DateTime.Now;
             int a = aDAO.Add(det);
             Trace.WriteLine(det.ID_ASPEK);
             

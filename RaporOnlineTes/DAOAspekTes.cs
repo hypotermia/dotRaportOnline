@@ -47,7 +47,6 @@ namespace RaporOnlineTes
         public void TestTambahAspekbenar()
         {
             ASPEK Asp = new ASPEK();
-            /*Asp.ID_ASPEK = 1;*/
             Asp.NAMA_ASPEK = "aspek";
             Asp.DIBUAT_OLEH = "Zakki";
             Asp.DIBUAT_PADA = DateTime.Now;
