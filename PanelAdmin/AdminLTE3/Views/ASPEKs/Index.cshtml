@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AdminLTE3.Models.ASPEK>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h5>Halaman Aspek</h5>
+
+<p>
+    <div class="form-group">
+        <label class="control-sidebar-subheading">
+            Show me as online
+            <input type="checkbox" class="pull-right" checked>
+        </label>
+    </div>
+    <div class="input-group ">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+    
+    <a button type="button" class="btn btn-warning margin fa fa-plus" @Html.ActionLink("Tambah", "Create")
+
+</p>
+<table class="table table-bordered table-striped" id="example">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMA_ASPEK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIBUAT_OLEH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIBUAT_PADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIUBAH_OLEH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIUBAH_PADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS_AKTIF)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMA_ASPEK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIBUAT_OLEH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIBUAT_PADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIUBAH_OLEH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIUBAH_PADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUS_AKTIF)
+        </td>
+        <td>
+            <a button type="button" class="btn btn-warning margin fa fa-edit" @Html.ActionLink("Edit", "Edit", new { id = item.ID_ASPEK })
+            <a button type="button" class="btn btn-primary margin fa fa-eye" @Html.ActionLink("Details", "Details", new { id = item.ID_ASPEK })
+            <a button type="button" class="btn btn-danger margin fa fa-trash" @Html.ActionLink("Delete", "Delete", new { id = item.STATUS_AKTIF})
+        </td>
+    </tr>
+}
+    
+</table>

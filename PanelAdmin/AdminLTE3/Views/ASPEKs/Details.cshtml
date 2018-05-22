@@ -1,0 +1,67 @@
+﻿@model AdminLTE3.Models.ASPEK
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ASPEK</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMA_ASPEK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMA_ASPEK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIBUAT_OLEH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIBUAT_OLEH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIBUAT_PADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIBUAT_PADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIUBAH_OLEH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIUBAH_OLEH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIUBAH_PADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIUBAH_PADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS_AKTIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS_AKTIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ASPEK }) |
+    <a button type="button" class="fa fa-arrow-circle-o-left" @Html.ActionLink(" ", "Index")
+</p>

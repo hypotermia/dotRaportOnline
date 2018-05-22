@@ -1,0 +1,124 @@
+﻿@model IEnumerable<AdminLTE3.Models.KARYAWAN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a button type="button" class="fa fa-plus" @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NO_KTP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAMA_LENGKAP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JENIS_KELAMIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEMPAT_LAHIR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TANGGAL_LAHIR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AGAMA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS_PERKAWINAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KEWARGANEGARAAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PENDIDIKAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIBUAT_OLEH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIBUAT_PADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIUBAH_OLEH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIUBAH_PADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATUS_AKTIF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPARTEMEN1.NAMA_DEPARTEMEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JABATAN.NAMA_JABATAN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NO_KTP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAMA_LENGKAP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JENIS_KELAMIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEMPAT_LAHIR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TANGGAL_LAHIR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AGAMA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUS_PERKAWINAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KEWARGANEGARAAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PENDIDIKAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIBUAT_OLEH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIBUAT_PADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIUBAH_OLEH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIUBAH_PADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATUS_AKTIF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPARTEMEN1.NAMA_DEPARTEMEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JABATAN.NAMA_JABATAN)
+        </td>
+        <td>
+            <a button type="button" class="fa fa-edit" @Html.ActionLink("Edit", "Edit", new { id = item.ID_KARYAWAN }) |
+            <a button type="button" class="fa fa-eye" @Html.ActionLink("Details", "Details", new { id = item.ID_KARYAWAN }) |
+            <a button type="button" class="fa fa-trash" @Html.ActionLink("Delete", "Delete", new { id = item.ID_KARYAWAN })
+        </td>
+    </tr>
+}
+
+</table>
