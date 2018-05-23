@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raport Online", "Raport Onl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaporOnlineTes", "RaporOnlineTes\RaporOnlineTes.csproj", "{3E8B2078-C708-40B8-B5E6-DAA7439E5719}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{D0A737AB-9530-4579-B684-27D816AFE0E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAp", "WebAp\WebAp.csproj", "{43CB9D59-19C2-436B-BE0B-BD472282F977}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E8B2078-C708-40B8-B5E6-DAA7439E5719}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0A737AB-9530-4579-B684-27D816AFE0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0A737AB-9530-4579-B684-27D816AFE0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0A737AB-9530-4579-B684-27D816AFE0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0A737AB-9530-4579-B684-27D816AFE0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43CB9D59-19C2-436B-BE0B-BD472282F977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43CB9D59-19C2-436B-BE0B-BD472282F977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43CB9D59-19C2-436B-BE0B-BD472282F977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43CB9D59-19C2-436B-BE0B-BD472282F977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

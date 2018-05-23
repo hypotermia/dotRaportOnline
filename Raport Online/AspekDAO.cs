@@ -19,17 +19,20 @@ namespace Raport_Online
             try
             {
                 context.ASPEK.Add(aspek);
-
-                result = context.SaveChanges();
+                return context.SaveChanges();
+               // result = context.SaveChanges();
 
             }
-            catch(Exception ex)
+            catch
             {
                 result = -1;
-                logger.Error(ex.Message);
-                logger.Error(ex.InnerException);
+                //logger.Error(ex.GetType());
+                //logger.Error(ex.Message);
+                //logger.Error(ex.InnerException);
+                //throw ex;
             }
-            logger.Debug(result);
+            //logger.Debug(result);
+
             return result;
         }
         public int Edit(int id, ASPEK aspek)

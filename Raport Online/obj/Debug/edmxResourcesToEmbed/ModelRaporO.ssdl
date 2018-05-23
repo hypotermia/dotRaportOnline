@@ -52,7 +52,7 @@
     <Key>
       <PropertyRef Name="ID_JABATAN" />
     </Key>
-    <Property Name="ID_JABATAN" Type="int" Nullable="false" />
+    <Property Name="ID_JABATAN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAMA_JABATAN" Type="varchar" MaxLength="25" />
     <Property Name="DIBUAT_OLEH" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="DIBUAT_PADA" Type="datetime" Nullable="false" />

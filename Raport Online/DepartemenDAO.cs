@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Raport_Online
      public class DepartemenDAO
     {
         private OnlineRaporEntities context = new OnlineRaporEntities();
-
+        private Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public DepartemenDAO()
         {
 
@@ -23,9 +24,10 @@ namespace Raport_Online
                 context.DEPARTEMEN.Add(departemen);
                 result=context.SaveChanges();
             }
-            catch
+            catch(Exception ex)
             {
-                result = -1;
+                //result = -1;
+
             }
             return result;
         }

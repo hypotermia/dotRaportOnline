@@ -33,7 +33,7 @@ namespace RaporOnlineTes
         public void TesTambahKarybenar()
         {
             KARYAWAN det = new KARYAWAN();
-            det.NAMA_LENGKAP = "Saya";
+            det.NAMA_LENGKAP = "Saya saya";
             det.JENIS_KELAMIN = "apa";
             det.AGAMA = "Islam";
             det.STATUS_PERKAWINAN = "Belum";

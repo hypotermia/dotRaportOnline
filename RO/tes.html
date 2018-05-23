@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>Menambah dan menghapus simpul</title>
+  <script type="text/javascript">
+   var masukan = 0;
+   function tambahTeman(){
+    var table = document.getElementById('id_daftar');
+    var tr  =  document.createElement('tr');
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+    var td3 = document.createElement('td');
+    var td4 = document.createElement('td');
+    var inp1 = document.createElement('input');  
+    var inp2 = document.createElement('input');
+    var inp3 = document.createElement('input');
+
+    if(masukan>0){
+     var gambar = document.createElement('img');
+     gambar.setAttribute('src','icon-add.png');
+     gambar.setAttribute('width','20');
+     gambar.onclick = function (){
+      hapusTeman(tr);
+    }
+    td1.appendChild(gambar);
+  }  
+  inp1.setAttribute("name", "nama", +masukan);
+  inp2.setAttribute("name", "alamat" +masukan);
+  // inp3.setAttribute("name", "ukuran" +masukan);
+  table.appendChild(tr);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  tr.appendChild(td4);
+  td2.appendChild(inp1);
+  td3.appendChild(inp2);
+  // td4.appendChild(inp3);
+  
+  masukan++;
+}
+
+function hapusTeman(tr){
+  tr.parentNode.removeChild(tr); 
+}
+</script>
+</head>
+<body>
+ <table style="font-family:Verdana, Geneva, sans-serif; font-size:12px;">
+   <tbody id="id_daftar">
+     <tr><td colspan="3"><a href="javascript:tambahTeman();">
+
+      <img src="tambah.png" width="20"/>Tambah seorang teman</a>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Nama : </td>
+    <td id="subaspek">Alamat : </td>
+  </tr>
+  <span></span><input type="button" class="btn" value="Delete " name="">
+  
+</tbody>
+</table>
+
+
+</body>
+</html>
