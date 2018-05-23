@@ -83,21 +83,6 @@
       <DependentUpon>ModelRaporO.tt</DependentUpon>
     </Compile>
     <Compile Include="LoginDAO.cs" />
-    <Compile Include="Modeling.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modeling.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modeling.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modeling.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modeling.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Modeling.edmx</DependentUpon>
-    </Compile>
     <Compile Include="ModelRaporO.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,13 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Modeling.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modeling.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Modeling.edmx.diagram">
-      <DependentUpon>Modeling.edmx</DependentUpon>
-    </None>
     <EntityDeploy Include="ModelRaporO.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelRaporO.Designer.cs</LastGenOutput>
@@ -149,16 +127,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modeling.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modeling.edmx</DependentUpon>
-      <LastGenOutput>Modeling.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modeling.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modeling.edmx</DependentUpon>
-      <LastGenOutput>Modeling.cs</LastGenOutput>
-    </Content>
     <Content Include="ModelRaporO.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelRaporO.edmx</DependentUpon>

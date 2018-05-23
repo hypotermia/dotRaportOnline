@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OnlineRaporModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ASPEK">
+          <Key>
+            <PropertyRef Name="ID_ASPEK" />
+          </Key>
+          <Property Name="ID_ASPEK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAMA_ASPEK" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DIBUAT_OLEH" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DIBUAT_PADA" Type="datetime" Nullable="false" />
+          <Property Name="DIUBAH_OLEH" Type="varchar" MaxLength="20" />
+          <Property Name="DIUBAH_PADA" Type="datetime" />
+          <Property Name="STATUS_AKTIF" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OnlineRaporModelStoreContainer">
+          <EntitySet Name="ASPEK" EntityType="Self.ASPEK" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OnlineRaporModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ASPEK">
+          <Key>
+            <PropertyRef Name="ID_ASPEK" />
+          </Key>
+          <Property Name="ID_ASPEK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAMA_ASPEK" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIBUAT_OLEH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIBUAT_PADA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DIUBAH_OLEH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DIUBAH_PADA" Type="DateTime" Precision="3" />
+          <Property Name="STATUS_AKTIF" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OnlineRaporEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ASPEK" EntityType="Self.ASPEK" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OnlineRaporModelStoreContainer" CdmEntityContainer="OnlineRaporEntities">
+          <EntitySetMapping Name="ASPEK">
+            <EntityTypeMapping TypeName="OnlineRaporModel.ASPEK">
+              <MappingFragment StoreEntitySet="ASPEK">
+                <ScalarProperty Name="ID_ASPEK" ColumnName="ID_ASPEK" />
+                <ScalarProperty Name="NAMA_ASPEK" ColumnName="NAMA_ASPEK" />
+                <ScalarProperty Name="DIBUAT_OLEH" ColumnName="DIBUAT_OLEH" />
+                <ScalarProperty Name="DIBUAT_PADA" ColumnName="DIBUAT_PADA" />
+                <ScalarProperty Name="DIUBAH_OLEH" ColumnName="DIUBAH_OLEH" />
+                <ScalarProperty Name="DIUBAH_PADA" ColumnName="DIUBAH_PADA" />
+                <ScalarProperty Name="STATUS_AKTIF" ColumnName="STATUS_AKTIF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

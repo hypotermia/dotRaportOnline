@@ -53,7 +53,6 @@ E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\Raport Online.dl
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\EntityFramework.xml
-E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csprojResolveAssemblyReference.cache
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CoreCompileInputs.cache
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csproj.CopyComplete
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.dll
@@ -61,3 +60,4 @@ E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.p
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\NLog.dll
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\NLog.xml
 E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\bin\Debug\NLog.config
+E:\btcamp lawencon\git\dotRaportOnline\RaporOnlineTes\obj\Debug\RaporOnlineTes.csprojAssemblyReference.cache
